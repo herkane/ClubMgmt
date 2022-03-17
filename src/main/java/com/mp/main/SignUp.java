@@ -31,7 +31,7 @@ public class SignUp extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+		
 	}
 
 	/**
@@ -56,12 +56,12 @@ public class SignUp extends HttpServlet {
 				e.printStackTrace();
 			}
 			request.setAttribute("user", user);
-			getServletContext().getRequestDispatcher("/Verify.jsp").forward(request, response);
+			getServletContext().getRequestDispatcher("/Pages/Verify.jsp").forward(request, response);
 		} else {
 			if(gmailCode.equals(request.getParameter("code"))) {
-				getServletContext().getRequestDispatcher("/Dashboard.jsp").forward(request, response);
+				getServletContext().getRequestDispatcher("/Pages/Dashboard.jsp").forward(request, response);
 			} else {
-				getServletContext().getRequestDispatcher("/SignUp.jsp").forward(request, response);
+				getServletContext().getRequestDispatcher("/Pages/SignUp.jsp").forward(request, response);
 			}
 		}
 		
