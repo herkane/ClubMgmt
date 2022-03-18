@@ -23,52 +23,57 @@
 		</jsp:include>  
         <!-- Page Content  -->
         <div id="content" class="p-4 p-md-5 pt-5">
-            <div class=e110_3>
-                <div class="e110_6"></div><span class="e110_7">Weekly new members</span><span class="e110_9">+106</span>
-                <div class=e110_10>
-                    <div class="e110_11"></div>
-                    <div class="e110_12"></div>
-                    <div class="e110_13"></div>
-                    <div class="e110_14"></div>
-                    <div class="e110_15"></div>
-                    <div class="e110_16"></div>
-                    <div class="e110_17"></div>
-                    <div class="e110_18"></div>
-                    <div class="e110_19"></div>
-                    <div class="e110_20"></div>
-                    <div class="e110_21"></div>
-                    <div class="e110_22"></div>
-                    <div class="e110_23"></div>
-                    <div class="e110_24"></div>
+            < <main class="page service-page">
+      <section class="clean-block clean-services dark">
+        <div class="container">
+          <div class="block-heading" style="padding-top: 15px">
+            <h2 class="text-info">Demandes d'adhesion</h2>
+          </div>
+            <div class="row" style="text-align:-webkit-center">
+          <%
+          for(int i=0;i<6;i++){
+          %>
+          
+        
+            <div class="col-md-6 col-lg-4">
+              <div class="card" style="align-items:center; 
+    border-radius: 45% 45% 0 0;
+    box-shadow: 3px 3px 10px lightgrey;position: relative;
+    width: fit-content;">
+                <img
+                style="width: 300px;height: 300px; border-radius: 50%;  box-shadow:0 5px 15px rgba(0,0,0, 0.4") ;"
+   
+                  class="card-img-top d-block"
+                  
+                  src="../css/demandes_assets/img/scenery/image5.jpg"
+                />
+                <div class="card-body"><h4 class="card-title">Fatima</h4></div>
+                <div>
+                  <button class="btn btn-outline-primary btn-sm"  type="button" id="accepter">
+                    Accepter
+                  </button>
+               
+                  <button class="btn btn-outline-primary btn-sm" id="refuser" >
+                    Refuser
+                  </button>
                 </div>
-                <div class="e110_43"></div><span class="e110_44">New subscriptors</span><span class="e110_45">+31</span>
-                <div class=e110_61>
-                    <div class="e110_62"></div>
-                    <div class="e110_63"></div>
-                    <div class="e110_64"></div>
-                    <div class="e110_65"></div>
-                    <div class="e110_66"></div>
-                    <div class="e110_67"></div>
-                    <div class="e110_68"></div>
-                    <div class="e110_69"></div>
-                    <div class="e110_70"></div>
-                    <div class="e110_71"></div>
-                    <div class="e110_72"></div>
-                    <div class="e110_73"></div>
-                    <div class="e110_74"></div>
-                    <div class="e110_75"></div>
-                    <div class="e110_76"></div>
-                    <div class="e110_77"></div>
-                    <div class="e110_78"></div>
-                    <div class="e110_79"></div>
-                    <div class="e110_80"></div>
-                    <div class="e110_81"></div>
-                    <div class="e110_82"></div>
-                    <div class="e110_83"></div>
-                    <div class="e110_84"></div>
-                    <div class="e110_85"></div>
-                </div>
+              </div>
             </div>
+         
+          
+          <%
+          }
+          %>
+          
+           </div>
+        </div>
+      </section>
+    </main>
+                
+                
+                
+                
+               
         </div>
     </div>
 

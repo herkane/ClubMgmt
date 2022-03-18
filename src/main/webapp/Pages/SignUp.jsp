@@ -48,7 +48,7 @@
                                 <div class="row mb-3">
                                     <div class="col-sm-6 mb-3 mb-sm-0"><input class="form-control form-control-user" type="password" id="examplePasswordInput" placeholder="Password" name="password"></div>
                                     <div class="col-sm-6"><input class="form-control form-control-user" type="password" id="exampleRepeatPasswordInput" placeholder="Repeat Password" name="password_repeat"></div>
-                                </div><button class="btn btn-primary d-block btn-user w-100" type="submit" style="color: var(--bs-body-bg);background: #359ae2;border-color: #359ae2;">Register
+                                </div><button class="btn btn-primary d-block btn-user w-100" type="submit" style="color: var(--bs-body-bg);background: #359ae2;border-color: #359ae2;"><a  href="Verify.jsp" style="text-decoration:none; color:white">Register
                                     Account</button>
                                 <hr>
                                 <hr>
