@@ -12,9 +12,9 @@
     <link rel="stylesheet" href="../css/signin_assets/css/styles.min.css?h=51fe63593838648bb219f3824fc7486c">
 </head>
 
-<body class="bg-gradient-primary" style="background: #dddddd;">
+<body class="bg-gradient-primary" style="background: rgb(255, 255, 255)">
     <!-- Start: Navigation with Button -->
-    <nav class="navbar navbar-light navbar-expand-lg navigation-clean-button">
+    <nav class="navbar navbar-light navbar-expand-lg navigation-clean-button" >
         <div class="container"><a class="navbar-brand" href="index.jsp">Company Name</a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle
                     navigation</span><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navcol-1">
@@ -30,9 +30,9 @@
     </nav>
     <!-- End: Navigation with Button -->
     <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-9 col-lg-12 col-xl-10">
-                <div class="card shadow-lg o-hidden border-0 my-5">
+        <div class="row justify-content-center" >
+            <div class="col-md-9 col-lg-12 col-xl-10"  >
+                <div class="card shadow-lg o-hidden border-0 my-5" style="margin-top:0.5rem! important">
                     <div class="card-body p-0">
                         <div class="row">
                             <div class="col-lg-6 d-none d-lg-flex">
