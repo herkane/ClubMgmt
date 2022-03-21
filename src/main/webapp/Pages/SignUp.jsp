@@ -128,7 +128,7 @@
                     type="submit"
                     style="border-radius:5px"
                   >
-                    Register Account
+                   <a href="Verify.jsp" style="text-decoration:none;color:white">Register Account</a>
                   </button>
                 </form>
                                   
