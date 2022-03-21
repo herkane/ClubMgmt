@@ -6,10 +6,10 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
     <title>Home - Brand</title>
-    <link rel="stylesheet" href="../css/home_assets/bootstrap/css/bootstrap.min.css?h=1195d539be9b8ad00796352c8f2b6362" />
+    <link rel="stylesheet" href="<%=request.getContextPath()%>/css/home_assets/bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+Inscriptional+Pahlavi&amp;display=swap" />
-    <link rel="stylesheet" href="../css/home_assets/css/styles.min.css?h=3fc31f56e195fbb19e41e3098a499bcb" />
+    <link rel="stylesheet" href="<%=request.getContextPath()%>/css/home_assets/css/styles.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css" />
 </head>
 
@@ -45,7 +45,7 @@
                   height: 38px;
                 "
               >
-              <a href="signin.jsp" style="text-decoration:none; color:white" >
+              <a href="<%=request.getContextPath()%>/Login" style="text-decoration:none; color:white" >
                 Login
                 </a>
               </button>
@@ -58,15 +58,12 @@
     <main class="page landing-page" style="height: 628px; padding-top: 0px">
       <section
         class="clean-block clean-hero"
-        style="
-          height: auto;
+        style=
+        "height: auto;
           border-color: #464c50;
-          color: rgba(37, 88, 144, 0);
-          background: url('../css/home_assets/img/scenery/bg.jpg?h=8c817af2139b5302202332e27b755922')
-              center / cover no-repeat,
-            #b42b2b;
-        "
-      >
+          color: rgba(37, 88, 144);
+          background: url(&quot;<%=request.getContextPath()%>/css/home_assets/img/intro-bg.svg&quot;)
+          center / cover no-repeat,">
         <div class="text">
           <h2>JOIN THE BEST GROWING COMMUNITY</h2>
           <p>
@@ -78,7 +75,7 @@
             type="button"
             style="border-radius: 20px"
           >
-          <a href="SignUp.jsp" style="text-decoration:none">
+          <a href="<%=request.getContextPath()%>/SignUp" style="text-decoration:none">
             Join Us
             </a>
           </button>
@@ -106,6 +103,6 @@
     <!-- End: Footer Dark -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
-    <script src="../css/home_assets/js/script.min.js?h=1665ca77920bb6c16d0d2edee4a77966"></script>
+    <script src="<%=request.getContextPath()%>/css/home_assets/js/script.min.js?h=1665ca77920bb6c16d0d2edee4a77966"></script>
   </body>
 </html>

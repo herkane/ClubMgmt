@@ -7,9 +7,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Login - Brand</title>
-    <link rel="stylesheet" href="../css/signin_assets/bootstrap/css/bootstrap.min.css?h=1195d539be9b8ad00796352c8f2b6362">
+    <link rel="stylesheet" href="<%=request.getContextPath()%>/css/signin_assets/bootstrap/css/bootstrap.min.css?h=1195d539be9b8ad00796352c8f2b6362">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
-    <link rel="stylesheet" href="../css/signin_assets/css/styles.min.css?h=51fe63593838648bb219f3824fc7486c">
+    <link rel="stylesheet" href="<%=request.getContextPath()%>/css/signin_assets/css/styles.min.css?h=51fe63593838648bb219f3824fc7486c">
 </head>
 
 <body class="bg-gradient-primary" style="background: #dddddd;">
@@ -36,7 +36,7 @@
                     <div class="card-body p-0">
                         <div class="row">
                             <div class="col-lg-6 d-none d-lg-flex">
-                                <div class="flex-grow-1 bg-login-image" style="background: url(&quot;../css/signin_assets/img/welcome.svg?h=13daa808663ca5c8df5445f7b9775855&quot;) center / contain no-repeat;">
+                                <div class="flex-grow-1 bg-login-image" style="background: url(&quot;<%=request.getContextPath()%>/css/signin_assets/img/welcome.svg?h=13daa808663ca5c8df5445f7b9775855&quot;) center / contain no-repeat;">
                                 </div>
                             </div>
                             <div class="col-lg-6">
@@ -44,7 +44,7 @@
                                     <div class="text-center">
                                         <h4 class="text-dark mb-4">Welcome Back!</h4>
                                     </div>
-                                    <form class="user">
+                                    <form class="user" action="<%=request.getContextPath()%>/Login" method="POST">
                                         <div class="mb-3"><input class="form-control form-control-user" type="email" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Enter Email Address..." name="email"></div>
                                         <div class="mb-3"><input class="form-control form-control-user" type="password" id="exampleInputPassword" placeholder="Password" name="password"></div>
                                         <div class="mb-3">
@@ -55,7 +55,7 @@
                                         <hr>
                                     </form>
                                     <div class="text-center"></div>
-                                    <div class="text-center"><a class="small" href="register.html" style="color: rgb(0,0,0);">Create an Account!</a></div>
+                                    <div class="text-center"><a class="small" href="<%=request.getContextPath()%>/SignUp" style="color: rgb(0,0,0);">Create an Account!</a></div>
                                 </div>
                             </div>
                         </div>
@@ -65,7 +65,7 @@
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../css/signin_assets/js/script.min.js?h=4d952d21517087db850f0bbc41a815ca"></script>
+    <script src="<%=request.getContextPath()%>/css/signin_assets/js/script.min.js?h=4d952d21517087db850f0bbc41a815ca"></script>
 </body>
 
 </html>

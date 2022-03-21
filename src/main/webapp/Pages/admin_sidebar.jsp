@@ -11,23 +11,26 @@
                 </a>
                 <hr class="sidebar-divider my-0">
                 <ul class="navbar-nav text-light" id="accordionSidebar" style="height: 400px;margin-top: 0px;margin-bottom: 50px">
-                    <li class="nav-item"><a class="nav-link active" href="Dashboard.jsp"><i
+                    <li class="nav-item"><a class="nav-link active" href="<%=request.getContextPath()%>/Account"><i
                                 class="fas fa-tachometer-alt"></i><span>&nbsp;Tableau de bord</span></a></li>
                     <hr class="sidebar-divider">
                     <div class="sidebar-heading">
                         <p class="mb-0">gestion de club</p>
                     </div>
-                    <li class="nav-item"><a class="nav-link" href="users_list.jsp"><i
+                    <li class="nav-item"><a class="nav-link" href="<%=request.getContextPath()%>/Account/UsersList"><i
                                 class="fas fa-table"></i><span>&nbsp;Liste des utilisateurs</span></a></li>
-                    <li class="nav-item"><a class="nav-link" href="subs_list.jsp"><i
+                    <li class="nav-item"><a class="nav-link" href="<%=request.getContextPath()%>/Account/SubsList">
+                    <i
                                 class="fas fa-user-friends"></i><span>&nbsp;Liste des abonnées</span></a></li>
                     <li class="nav-item"><a class="nav-link" href="activities.jsp"><i
                                 class="fas fa-hand-holding-heart"></i><span>Activités</span></a></li>
-                    <li class="nav-item"><a class="nav-link" href="tables.html"><i
-                                class="fas fa-user-clock"></i><span>Demandes d'adhesion</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="tables.html">
+                    <i class="fas fa-user-clock"></i><span>Demandes d'adhesion</span></a></li>
                     <hr class="sidebar-divider">
-                    <li class="nav-item"><a class="nav-link" href="adhesion.jsp"><i
-                                class="fas fa-crown"></i><span>S'abonner</span></a></li>
+                    <% if(!request.getAttribute("role").equals(0)){ %>
+                    <li class="nav-item"><a class="nav-link" href="adhesion.jsp">
+                    <i class="fas fa-crown"></i><span>S'abonner</span></a></li>
+                    <%}%>
                 </ul>
                 <div class="text-center d-none d-md-inline"><button class="btn rounded-circle border-0" id="sidebarToggle" type="button"></button></div>
             </div>

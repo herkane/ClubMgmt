@@ -7,7 +7,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Register - Brand</title>
-    <link rel="stylesheet" href="../css/signup_assets/bootstrap/css/bootstrap.min.css?h=1195d539be9b8ad00796352c8f2b6362">
+    <link rel="stylesheet" href= "<%=request.getContextPath()%>/css/signup_assets/bootstrap/css/bootstrap.min.css?h=1195d539be9b8ad00796352c8f2b6362">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
 </head>
 
@@ -39,7 +39,7 @@
                             <div class="text-center" style="border-width: 59px;">
                                 <h4 class="text-dark mb-4">Create an Account!</h4>
                             </div>
-                            <form class="user" action="../SignUp" method="post" >
+                            <form class="user" action="<%=request.getContextPath()%>/SignUp" method="POST" >
                                 <div class="row mb-3">
                                     <div class="col-sm-6 mb-3 mb-sm-0"><input class="form-control form-control-user" type="text" id="exampleFirstName" placeholder="First Name" name="first_name"></div>
                                     <div class="col-sm-6"><input class="form-control form-control-user" type="text" id="exampleFirstName" placeholder="Last Name" name="last_name"></div>
@@ -54,12 +54,12 @@
                                 <hr>
                             </form>
                             <div class="text-center"></div>
-                            <div class="text-center"><a class="small" href="signin.jsp">Already have an account?
+                            <div class="text-center"><a class="small" href="<%=request.getContextPath()%>/Login">Already have an account?
                                     Login!</a></div>
                         </div>
                     </div>
                     <div class="col-lg-5 d-none d-lg-flex">
-                        <div class="flex-grow-1 bg-register-image" style="background: url(&quot;../css/signup_assets/img/hello.svg?h=16522e3cb12ac0dd75f76d37416b5125&quot;) center / contain no-repeat;">
+                        <div class="flex-grow-1 bg-register-image" style="background: url(<%=request.getContextPath()%>/css/signup_assets/img/hello.svg) center / contain no-repeat;">
                         </div>
                     </div>
                 </div>
@@ -67,7 +67,7 @@
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../css/signup_assets/js/script.min.js?h=4d952d21517087db850f0bbc41a815ca"></script>
+    <script src="<%=request.getContextPath()%>/css/signup_assets/js/script.min.js?h=4d952d21517087db850f0bbc41a815ca"></script>
 </body>
 
 </html>

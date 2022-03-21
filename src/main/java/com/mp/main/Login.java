@@ -7,6 +7,8 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
+import jakarta.websocket.Session;
 
 /**
  * Servlet implementation class Login
@@ -28,15 +30,30 @@ public class Login extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		request.getRequestDispatcher("/Pages/signin.jsp").forward(request, response);
 	}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
+	@SuppressWarnings("deprecation")
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		doGet(request, response);
+		HttpSession session = request.getSession();
+		if(session.getAttribute("user") == null) {
+			UserManager user = new UserManager();
+			String email = request.getParameter("email").trim();
+			String pwd = request.getParameter("password").trim();
+			if(user.validate(email, pwd)) {
+				User userSession = user.getUser(email); 
+				session.setAttribute("user", userSession);
+				//response.sendRedirect(request.getContextPath()+"/Account");
+				request.getRequestDispatcher("/Account").forward(request, response);
+				System.out.println("Login success");
+			} else {
+				request.getRequestDispatcher("/Login").forward(request, response);
+			}
+		}
 	}
 
 }

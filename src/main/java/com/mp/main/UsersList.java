@@ -4,24 +4,22 @@ import java.io.IOException;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
-import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 
 /**
- * Servlet implementation class Verify
+ * Servlet implementation class UsersList
  */
-@WebServlet("/SignUp/Verify")
-public class Verify extends HttpServlet {
+@WebServlet("/Account/UsersList")
+public class UsersList extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private String gmailCode;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Verify() {
+    public UsersList() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -31,8 +29,12 @@ public class Verify extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		request.getRequestDispatcher("/Pages/Verify.jsp").forward(request, response);
-		
+		HttpSession session = request.getSession();
+		User user = (User) session.getAttribute("user");
+		request.setAttribute("f_name", user.getPrenom());
+		request.setAttribute("l_name", user.getNom());
+		request.setAttribute("role", user.getRole());
+		request.getRequestDispatcher("/Pages/users_list.jsp").forward(request, response);
 	}
 
 	/**
@@ -40,20 +42,6 @@ public class Verify extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		HttpSession session = request.getSession();
-		if(session.getAttribute("user") == null) {
-			gmailCode = request.getAttribute("gmailCode").toString();
-			if(gmailCode.equals(request.getParameter("code"))) {
-				UserManager user = new UserManager();
-				User userSession = user.getUser(request.getAttribute("email").toString());
-				session.setAttribute("user", userSession);
-				request.getRequestDispatcher("/Account").forward(request, response);			
-			} else {
-				response.sendRedirect("/Verify");
-			}
-		} else {
-			response.sendRedirect("/Account");			
-		}
 	}
 
 }
