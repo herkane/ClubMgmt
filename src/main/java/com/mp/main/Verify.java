@@ -42,10 +42,10 @@ public class Verify extends HttpServlet {
 		// TODO Auto-generated method stub
 		HttpSession session = request.getSession();
 		if(session.getAttribute("user") == null) {
-			gmailCode = request.getAttribute("gmailCode").toString();
+			gmailCode = "0000";
 			if(gmailCode.equals(request.getParameter("code"))) {
 				UserManager user = new UserManager();
-				User userSession = user.getUser(request.getAttribute("email").toString());
+				User userSession = user.getUser("a@g.c");
 				session.setAttribute("user", userSession);
 				request.getRequestDispatcher("/Account").forward(request, response);			
 			} else {

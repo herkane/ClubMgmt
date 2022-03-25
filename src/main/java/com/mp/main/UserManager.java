@@ -1,5 +1,6 @@
 package com.mp.main;
 
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
@@ -7,6 +8,7 @@ import org.hibernate.HibernateException;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
 import org.hibernate.boot.MetadataSources;
 import org.hibernate.boot.registry.StandardServiceRegistry;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
@@ -14,9 +16,6 @@ import org.hibernate.cfg.Configuration;
 
 public class UserManager {
 	 protected SessionFactory sessionFactory;
-	 final StandardServiceRegistry registry = new StandardServiceRegistryBuilder()
-			 .configure()
-			 .build();	
 	 
 	    protected void setup() {
 	        // code to load Hibernate Session factory
@@ -75,13 +74,28 @@ public class UserManager {
 	    public User getUser(String email) {
 	    	Session session = sessionFactory.openSession();
 	    	session.beginTransaction();
-	    	Query query = session.createQuery("from User where email = :email").setParameter("email", email);
-	    	User user = (User) query.getSingleResult();
+	    	Query<User> query = session.createQuery("from User where email = :email").setParameter("email", email);
+	    	User user = query.getSingleResult();
 	    	session.getTransaction();
 	    	session.close();
 	    	return user;
 	    }
-
+	    
+		public List<User> getUsersList(int role) {
+			setup();
+			List<User> users = new ArrayList<User>();
+			try(Session session = sessionFactory.openSession()){
+				session.beginTransaction();
+				users = session.createQuery("FROM User where role=:role").setParameter("role", role).list();
+			    for(int i = 0; i < users.size(); i++) {
+			    	System.out.println(users.get(i).getNom());
+			    }
+				session.getTransaction().commit();
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		    return users;
+	    }
 	    
 	    public boolean validate(String email, String password) {
 	    	setup();

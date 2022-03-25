@@ -41,7 +41,7 @@
 <body>
 	<div class=e118_3>
   <div class="e118_4">
-  <form action="<%=request.getContextPath()%>/Verify" method="post">
+  <form action="<%=request.getContextPath()%>/SignUp/Verify" method="post">
   	<div class="input-group input-group-lg">
   <div class="input-group-prepend">
     <span class="input-group-text" id="inputGroup-sizing-lg">Enter code</span>

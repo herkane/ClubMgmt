@@ -40,7 +40,6 @@ public class SignUp extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-
 		HttpSession session = request.getSession();
 		if(session.getAttribute("user") == null) {
 			if(gmailCode.isEmpty()) {
@@ -64,9 +63,9 @@ public class SignUp extends HttpServlet {
 					System.out.println("Email Sending Error : \n");
 					e.printStackTrace();
 				}
-				request.getRequestDispatcher("/Verify").forward(request, response);
+				request.getRequestDispatcher("/SignUp/Verify").forward(request, response);
 			} else {
-				request.getRequestDispatcher("/Verify").forward(request, response);
+				request.getRequestDispatcher("/SignUp/Verify").forward(request, response);
 			}
 		} else {
 			request.getRequestDispatcher("/Account").forward(request, response);

@@ -11,7 +11,7 @@ import jakarta.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class Index
  */
-@WebServlet("/Index")
+@WebServlet("/")
 public class Index extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -29,7 +29,6 @@ public class Index extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		request.getRequestDispatcher("/Pages/index.jsp").forward(request, response);
-
 	}
 
 	/**

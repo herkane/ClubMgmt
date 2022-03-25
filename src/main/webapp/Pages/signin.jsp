@@ -12,17 +12,17 @@
     <link rel="stylesheet" href="<%=request.getContextPath()%>/css/signin_assets/css/styles.min.css?h=51fe63593838648bb219f3824fc7486c">
 </head>
 
-<body class="bg-gradient-primary" style="background: #dddddd;">
+<body class="bg-gradient-primary" style="background: rgb(255, 255, 255)">
     <!-- Start: Navigation with Button -->
-    <nav class="navbar navbar-light navbar-expand-lg navigation-clean-button">
-        <div class="container"><a class="navbar-brand" href="#">Company Name</a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle
+    <nav class="navbar navbar-light navbar-expand-lg navigation-clean-button" >
+        <div class="container"><a class="navbar-brand" href="index.jsp">Company Name</a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle
                     navigation</span><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navcol-1">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item"></li>
                     <li class="nav-item"></li>
                 </ul><span class="navbar-text actions"> <a class="btn btn-light action-button" role="button" href="index.jsp"
-                        style="background: #359ae2;border-color: #359ae2;">Home</a></span><span class="navbar-text actions"> <a class="btn btn-light action-button" role="button" href="#"
+                        style="background: #359ae2;border-color: #359ae2;">Home</a></span><span class="navbar-text actions"> <a class="btn btn-light action-button" role="button" href="contact.jsp"
                         style="color: rgb(0,0,0);border-radius: 20px;background: rgb(255,255,255);border: 2px solid #359ae2;margin: 0;">Contact
                         Us</a></span>
             </div>
@@ -30,9 +30,9 @@
     </nav>
     <!-- End: Navigation with Button -->
     <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-9 col-lg-12 col-xl-10">
-                <div class="card shadow-lg o-hidden border-0 my-5">
+        <div class="row justify-content-center" >
+            <div class="col-md-9 col-lg-12 col-xl-10"  >
+                <div class="card shadow-lg o-hidden border-0 my-5" style="margin-top:0.5rem! important">
                     <div class="card-body p-0">
                         <div class="row">
                             <div class="col-lg-6 d-none d-lg-flex">
@@ -55,7 +55,7 @@
                                         <hr>
                                     </form>
                                     <div class="text-center"></div>
-                                    <div class="text-center"><a class="small" href="<%=request.getContextPath()%>/SignUp" style="color: rgb(0,0,0);">Create an Account!</a></div>
+                                    <div class="text-center"><a class="small" href="SignUp.jsp" style="color: rgb(0,0,0);">Create an Account!</a></div>
                                 </div>
                             </div>
                         </div>

@@ -22,9 +22,9 @@
                     <li class="nav-item"><a class="nav-link" href="<%=request.getContextPath()%>/Account/SubsList">
                     <i
                                 class="fas fa-user-friends"></i><span>&nbsp;Liste des abonnées</span></a></li>
-                    <li class="nav-item"><a class="nav-link" href="activities.jsp"><i
+                    <li class="nav-item"><a class="nav-link" href="<%=request.getContextPath()%>/Account/Activities"><i
                                 class="fas fa-hand-holding-heart"></i><span>Activités</span></a></li>
-                    <li class="nav-item"><a class="nav-link" href="tables.html">
+                    <li class="nav-item"><a class="nav-link" href="<%=request.getContextPath()%>/Account/Requests">
                     <i class="fas fa-user-clock"></i><span>Demandes d'adhesion</span></a></li>
                     <hr class="sidebar-divider">
                     <% if(!request.getAttribute("role").equals(0)){ %>

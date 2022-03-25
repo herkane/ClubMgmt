@@ -1,6 +1,7 @@
 package com.mp.main;
 
 import java.io.IOException;
+import java.util.List;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -31,9 +32,12 @@ public class UsersList extends HttpServlet {
 		// TODO Auto-generated method stub
 		HttpSession session = request.getSession();
 		User user = (User) session.getAttribute("user");
+		UserManager um = new UserManager();
 		request.setAttribute("f_name", user.getPrenom());
 		request.setAttribute("l_name", user.getNom());
 		request.setAttribute("role", user.getRole());
+		//request.setAttribute("usersList", um.getUsersList(2));
+		request.setAttribute("list", um.getUsersList(2));
 		request.getRequestDispatcher("/Pages/users_list.jsp").forward(request, response);
 	}
 

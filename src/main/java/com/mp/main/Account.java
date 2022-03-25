@@ -33,8 +33,9 @@ public class Account extends HttpServlet {
 		User user = (User) session.getAttribute("user");
 		request.setAttribute("f_name", user.getPrenom());
 		request.setAttribute("l_name", user.getNom());
-		request.setAttribute("role", user.getRole());
-		request.getRequestDispatcher("/Pages/Dashboard.jsp").forward(request, response);
+		request.setAttribute("role", user.getRole());			
+		//request.getRequestDispatcher("/Pages/Dashboard.jsp").forward(request, response);
+		getServletContext().getRequestDispatcher("/Pages/Dashboard.jsp").forward(request, response);
 	}
 
 	/**
@@ -42,7 +43,6 @@ public class Account extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		doGet(request, response);
 	}
 
 }

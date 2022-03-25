@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+    
 <!DOCTYPE html>
 <html>
 
@@ -30,39 +32,34 @@
                                 <table class="table my-0" id="dataTable">
                                     <thead>
                                         <tr>
-                                            <th>Name</th>
-                                            <th>Position</th>
-                                            <th>Office</th>
-                                            <th>Age</th>
-                                            <th>Start date</th>
-                                            <th>Salary</th>
+                                        	<th>Nº</th>
+                                            <th>Last Name</th>
+                                            <th>First Name</th>
+                                            <th>Email</th>
+                                            <th>Total Users : ${list.size()}</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <%
-                                        	for(int i = 0; i < 10; i++){
-                                        %>
-                                        <tr>
-                                            <td><img class="rounded-circle me-2" width="30" height="30" src="<%=request.getContextPath()%>/css/lists_assets/img/avatars/avatar1.jpeg">Airi Satou
-                                            </td>
-                                            <td>Accountant</td>
-                                            <td>Tokyo</td>
-                                            <td>33</td>
-                                            <td>2008/11/28</td>
-                                            <td>$162,700</td>
-                                        </tr>
-                                        <%
-                                        	}
-                                        %>
+                                            	<%int i = 1;%>
+                                            <c:forEach items="${list}" var="listItem">
+		                                        <tr>
+		                                        	
+		                                            <td><strong><%=i%>.</strong>&nbsp<img class="rounded-circle me-2" width="30" height="30" src="<%=request.getContextPath()%>/css/lists_assets/img/avatars/avatar1.jpeg"></td>
+			                                        <td><c:out value="${listItem.getPrenom()}"/></td>
+			                                        <td><c:out value="${listItem.getNom()}"/></td>
+			                                        <td><c:out value="${listItem.getEmail()}"/></td>
+		                                        </tr>
+		                                        	<%i++;%>
+                                            </c:forEach>
+                                        
                                     </tbody>
                                     <tfoot>
                                         <tr>
-                                            <td><strong>Name</strong></td>
-                                            <td><strong>Position</strong></td>
-                                            <td><strong>Office</strong></td>
-                                            <td><strong>Age</strong></td>
-                                            <td><strong>Start date</strong></td>
-                                            <td><strong>Salary</strong></td>
+                                            <td><strong>Nº</strong></td>
+                                            <td><strong>Last Name</strong></td>
+                                            <td><strong>First Name</strong></td>
+                                            <td><strong>Email</strong></td>
+                                            <td><strong>Total Users : ${list.size()}</strong></td>
                                         </tr>
                                     </tfoot>
                                 </table>

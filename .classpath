@@ -37,5 +37,7 @@
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/Hibernate"/>
 	<classpathentry kind="lib" path="C:/Users/herka_lvzfxpq/.m2/repository/mysql/mysql-connector-java/8.0.25/mysql-connector-java-8.0.25.jar"/>
+	<classpathentry kind="lib" path="C:/Users/herka_lvzfxpq/Desktop/jakarta.servlet.jsp.jstl-2.0.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/herka_lvzfxpq/Desktop/jakarta.servlet.jsp.jstl-api-2.0.0.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

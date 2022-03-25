@@ -48,8 +48,8 @@ public class Login extends HttpServlet {
 				User userSession = user.getUser(email); 
 				session.setAttribute("user", userSession);
 				//response.sendRedirect(request.getContextPath()+"/Account");
-				request.getRequestDispatcher("/Account").forward(request, response);
 				System.out.println("Login success");
+				request.getRequestDispatcher("/Account").forward(request, response);
 			} else {
 				request.getRequestDispatcher("/Login").forward(request, response);
 			}
