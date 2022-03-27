@@ -13,6 +13,7 @@
     <property name="show_sql">true</property>
         
     <mapping class="com.mp.main.User" />
+    <mapping class="com.mp.main.Activity" />
      
   </session-factory>
 </hibernate-configuration>

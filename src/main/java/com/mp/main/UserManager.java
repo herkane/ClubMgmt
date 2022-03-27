@@ -90,7 +90,7 @@ public class UserManager {
 			try(Session session = sessionFactory.openSession()){
 				session.beginTransaction();
 				users = session.createQuery("FROM User where role=:role").setParameter("role", role).list();
-			    for(int i = 0; i < users.size(); i++) {
+				for(int i = 0; i < users.size(); i++) {
 			    	System.out.println(users.get(i).getNom());
 			    }
 				session.getTransaction().commit();
