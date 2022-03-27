@@ -89,11 +89,25 @@ public class UserManager {
 			List<User> users = new ArrayList<User>();
 			try(Session session = sessionFactory.openSession()){
 				session.beginTransaction();
-				users = session.createQuery("FROM User where role=:role").setParameter("role", role).list();
-			    for(int i = 0; i < users.size(); i++) {
-			    	System.out.println(users.get(i).getNom());
-			    }
+				role = 0;
+				users = session.createQuery("FROM User where role = :role").setParameter("role", role).list();
+				session.flush();
 				session.getTransaction().commit();
+				session.clear();
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		    return users;
+	    }
+		
+		public List<User> getSubsList(int role) {
+			setup();
+			List<User> users = new ArrayList<User>();
+			try(Session session = sessionFactory.openSession()){
+				session.beginTransaction();
+				users = session.createQuery("FROM User where role=:role").setParameter("role", role).list();
+				session.getTransaction().commit();
+				session.close();
 			} catch (Exception e) {
 				e.printStackTrace();
 			}

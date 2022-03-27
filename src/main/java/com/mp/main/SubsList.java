@@ -31,9 +31,11 @@ public class SubsList extends HttpServlet {
 		// TODO Auto-generated method stub
 		HttpSession session = request.getSession();
 		User user = (User) session.getAttribute("user");
+		UserManager u = new UserManager();
 		request.setAttribute("f_name", user.getPrenom());
 		request.setAttribute("l_name", user.getNom());
 		request.setAttribute("role", user.getRole());
+		request.setAttribute("subList",u.getUsersList(1));
 		request.getRequestDispatcher("/Pages/subs_list.jsp").forward(request, response);	
 	}
 

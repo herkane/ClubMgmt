@@ -36,7 +36,6 @@ public class UsersList extends HttpServlet {
 		request.setAttribute("f_name", user.getPrenom());
 		request.setAttribute("l_name", user.getNom());
 		request.setAttribute("role", user.getRole());
-		//request.setAttribute("usersList", um.getUsersList(2));
 		request.setAttribute("list", um.getUsersList(2));
 		request.getRequestDispatcher("/Pages/users_list.jsp").forward(request, response);
 	}

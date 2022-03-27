@@ -101,7 +101,7 @@
         </div>
       </div>
     </header>
-    <section class="text-center content-section" id="about">
+    <section class="text-center content-section" id="about" style="padding-bottom:250px">
       <div class="container">
         <div class="row">
           <div class="col-lg-8 mx-auto">
@@ -119,14 +119,14 @@
       id="download"
       style="
         background-image: url('<%=request.getContextPath()%>/css/home_assets/img/downloads-bg.jpg?h=a1c980f5883ce005385e0ccdc3919d4c');
-        padding-top: 60px;
+        padding-top: 70px;
         padding-bottom: 50px;
       "
     >
       <div class="container">
         <div class="col-lg-8 mx-auto">
           <!-- Start: Contact Form Clean -->
-          <section class="contact-clean" style="padding: 0; width: 549px; text-align:-webkit-center;">
+          <section class="contact-clean" style="padding: 0; text-align:-webkit-center;">
             <form method="post" style="margin: 0;background-color: #ffffff26; color:white; box-shadow: 1px 1px 5px rgb(0 0 0 / 10%);">
               <h2 class="text-center">Contact us</h2>
               <!-- Start: Success Example -->
