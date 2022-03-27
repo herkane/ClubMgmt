@@ -7,20 +7,18 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import jakarta.servlet.http.HttpSession;
-import jakarta.websocket.Session;
 
 /**
- * Servlet implementation class Login
+ * Servlet implementation class JoinUs
  */
-@WebServlet("/Login")
-public class Login extends HttpServlet {
+@WebServlet("/Account/JoinUs")
+public class JoinUs extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Login() {
+    public JoinUs() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -30,7 +28,7 @@ public class Login extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		request.getRequestDispatcher("/Pages/signin.jsp").forward(request, response);
+		request.getRequestDispatcher("/Pages/adhesion.jsp").forward(request, response);
 	}
 
 	/**
@@ -38,22 +36,6 @@ public class Login extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		HttpSession session = request.getSession();
-		if(session.getAttribute("user") == null) {
-			UserManager user = new UserManager();
-			String email = request.getParameter("email").trim();
-			String pwd = request.getParameter("password").trim();
-			if(user.validate(email, pwd)) {
-				User userSession = user.getUser(email); 
-				session.setAttribute("user", userSession);
-				System.out.println("Login success");
-				response.sendRedirect(request.getContextPath()+"/Account");
-			} else {
-				response.sendRedirect(request.getContextPath()+"/Login");
-			}
-		} else {
-			response.sendRedirect(request.getContextPath()+"/Account");
-		}
 	}
 
 }

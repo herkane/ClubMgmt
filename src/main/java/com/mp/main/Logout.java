@@ -31,7 +31,7 @@ public class Logout extends HttpServlet {
 		// TODO Auto-generated method stub
 		HttpSession session = request.getSession();
 		session.invalidate();
-		request.getRequestDispatcher("/Index").forward(request, response);
+		response.sendRedirect(request.getContextPath()+"/Index");
 	}
 
 	/**
@@ -39,7 +39,6 @@ public class Logout extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		doGet(request, response);
 	}
 
 }

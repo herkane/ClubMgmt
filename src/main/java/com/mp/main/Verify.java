@@ -42,17 +42,21 @@ public class Verify extends HttpServlet {
 		// TODO Auto-generated method stub
 		HttpSession session = request.getSession();
 		if(session.getAttribute("user") == null) {
-			gmailCode = "0000";
+			gmailCode = (String) session.getAttribute("gmailCode");
 			if(gmailCode.equals(request.getParameter("code"))) {
 				UserManager user = new UserManager();
-				User userSession = user.getUser("a@g.c");
+				String email = (String) session.getAttribute("email");
+				System.out.println(email);
+				User userSession = user.getUser(email);
 				session.setAttribute("user", userSession);
-				request.getRequestDispatcher("/Account").forward(request, response);			
+				response.sendRedirect(request.getContextPath()+"/Account");		
+				session.removeAttribute("email");
+				session.removeAttribute("gmailCode");
 			} else {
-				response.sendRedirect("/Verify");
+				response.sendRedirect(request.getContextPath()+"/SignUp/Verify");
 			}
 		} else {
-			response.sendRedirect("/Account");			
+			response.sendRedirect(request.getContextPath()+"/Account");			
 		}
 	}
 

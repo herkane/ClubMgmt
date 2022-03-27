@@ -72,12 +72,15 @@ public class UserManager {
 	    }
 	    
 	    public User getUser(String email) {
-	    	Session session = sessionFactory.openSession();
-	    	session.beginTransaction();
-	    	Query<User> query = session.createQuery("from User where email = :email").setParameter("email", email);
-	    	User user = query.getSingleResult();
-	    	session.getTransaction();
-	    	session.close();
+	    	setup();
+	    	User user = new User();
+	    	try(Session session = sessionFactory.openSession()){
+	    		session.beginTransaction();
+		    	user = (User) session.createQuery("from User where email = :email").setParameter("email", email).getSingleResult();
+		    	session.getTransaction().commit();
+	    	} catch (Exception e) {
+	    		e.printStackTrace();
+	    	}
 	    	return user;
 	    }
 	    

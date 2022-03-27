@@ -54,8 +54,6 @@ public class SignUp extends HttpServlet {
 				userMngr.create(user);
 				userMngr.exit();
 				gmailCode = String.valueOf(Math.round(Math.random() * 100000));
-				request.setAttribute("gmailCode",gmailCode);
-				request.setAttribute("email", email);
 				try {
 					send.main(email,gmailCode);
 				} catch (Exception e) {
@@ -63,7 +61,9 @@ public class SignUp extends HttpServlet {
 					System.out.println("Email Sending Error : \n");
 					e.printStackTrace();
 				}
-				request.getRequestDispatcher("/SignUp/Verify").forward(request, response);
+				session.setAttribute("gmailCode", gmailCode);
+				session.setAttribute("email", email);
+				response.sendRedirect(request.getContextPath()+"/SignUp/Verify");
 			} else {
 				request.getRequestDispatcher("/SignUp/Verify").forward(request, response);
 			}
