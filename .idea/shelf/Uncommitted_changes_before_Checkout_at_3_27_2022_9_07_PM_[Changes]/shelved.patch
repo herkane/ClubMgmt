@@ -1,0 +1,340 @@
+Index: .idea/.gitignore
+===================================================================
+diff --git a/.idea/.gitignore b/.idea/.gitignore
+deleted file mode 100644
+--- a/.idea/.gitignore	(revision 8371ec927c99c1c5d728670c5120e234acea25bd)
++++ /dev/null	(revision 8371ec927c99c1c5d728670c5120e234acea25bd)
+@@ -1,8 +0,0 @@
+-# Default ignored files
+-/shelf/
+-/workspace.xml
+-# Datasource local storage ignored files
+-/dataSources/
+-/dataSources.local.xml
+-# Editor-based HTTP Client requests
+-/httpRequests/
+Index: .idea/dataSources.xml
+===================================================================
+diff --git a/.idea/dataSources.xml b/.idea/dataSources.xml
+deleted file mode 100644
+--- a/.idea/dataSources.xml	(revision 8371ec927c99c1c5d728670c5120e234acea25bd)
++++ /dev/null	(revision 8371ec927c99c1c5d728670c5120e234acea25bd)
+@@ -1,16 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+-    <data-source source="LOCAL" name="hibernate.cfg.xml/Hibernate" uuid="2a352130-5c37-459d-8753-fae4f5a4d65a">
+-      <driver-ref>mysql</driver-ref>
+-      <synchronize>true</synchronize>
+-      <imported>true</imported>
+-      <remarks>Hibernate
+-
+-C:/Users/herka_lvzfxpq/eclipse-workspace/MiniProjet/src/main/resources/hibernate.cfg.xml</remarks>
+-      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+-      <jdbc-url>jdbc:mysql://localhost:3306/club_mgmt</jdbc-url>
+-      <working-dir>$ProjectFileDir$</working-dir>
+-    </data-source>
+-  </component>
+-</project>
+\ No newline at end of file
+Index: .idea/vcs.xml
+===================================================================
+diff --git a/.idea/vcs.xml b/.idea/vcs.xml
+deleted file mode 100644
+--- a/.idea/vcs.xml	(revision 8371ec927c99c1c5d728670c5120e234acea25bd)
++++ /dev/null	(revision 8371ec927c99c1c5d728670c5120e234acea25bd)
+@@ -1,6 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="VcsDirectoryMappings">
+-    <mapping directory="" vcs="Git" />
+-  </component>
+-</project>
+\ No newline at end of file
+Index: .idea/jpa-buddy-datasource.xml
+===================================================================
+diff --git a/.idea/jpa-buddy-datasource.xml b/.idea/jpa-buddy-datasource.xml
+deleted file mode 100644
+--- a/.idea/jpa-buddy-datasource.xml	(revision 8371ec927c99c1c5d728670c5120e234acea25bd)
++++ /dev/null	(revision 8371ec927c99c1c5d728670c5120e234acea25bd)
+@@ -1,8 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="JpbDataSourceConfig">
+-    <data-source-infos>
+-      <data-source-info id="" persistence-unit-name="Default" />
+-    </data-source-infos>
+-  </component>
+-</project>
+\ No newline at end of file
+Index: .idea/compiler.xml
+===================================================================
+diff --git a/.idea/compiler.xml b/.idea/compiler.xml
+deleted file mode 100644
+--- a/.idea/compiler.xml	(revision 8371ec927c99c1c5d728670c5120e234acea25bd)
++++ /dev/null	(revision 8371ec927c99c1c5d728670c5120e234acea25bd)
+@@ -1,13 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="CompilerConfiguration">
+-    <annotationProcessing>
+-      <profile name="Maven default annotation processors profile" enabled="true">
+-        <sourceOutputDir name="target/generated-sources/annotations" />
+-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+-        <outputRelativeToContentRoot value="true" />
+-        <module name="MiniProjet" />
+-      </profile>
+-    </annotationProcessing>
+-  </component>
+-</project>
+\ No newline at end of file
+Index: .idea/jarRepositories.xml
+===================================================================
+diff --git a/.idea/jarRepositories.xml b/.idea/jarRepositories.xml
+deleted file mode 100644
+--- a/.idea/jarRepositories.xml	(revision 8371ec927c99c1c5d728670c5120e234acea25bd)
++++ /dev/null	(revision 8371ec927c99c1c5d728670c5120e234acea25bd)
+@@ -1,20 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="RemoteRepositoriesConfiguration">
+-    <remote-repository>
+-      <option name="id" value="central" />
+-      <option name="name" value="Central Repository" />
+-      <option name="url" value="https://repo.maven.apache.org/maven2" />
+-    </remote-repository>
+-    <remote-repository>
+-      <option name="id" value="central" />
+-      <option name="name" value="Maven Central repository" />
+-      <option name="url" value="https://repo1.maven.org/maven2" />
+-    </remote-repository>
+-    <remote-repository>
+-      <option name="id" value="jboss.community" />
+-      <option name="name" value="JBoss Community repository" />
+-      <option name="url" value="https://repository.jboss.org/nexus/content/repositories/public/" />
+-    </remote-repository>
+-  </component>
+-</project>
+\ No newline at end of file
+Index: .idea/jpa-buddy.xml
+===================================================================
+diff --git a/.idea/jpa-buddy.xml b/.idea/jpa-buddy.xml
+deleted file mode 100644
+--- a/.idea/jpa-buddy.xml	(revision 8371ec927c99c1c5d728670c5120e234acea25bd)
++++ /dev/null	(revision 8371ec927c99c1c5d728670c5120e234acea25bd)
+@@ -1,6 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="JpaBuddyIdeaProjectConfig">
+-    <option name="defaultUnitInitialized" value="true" />
+-  </component>
+-</project>
+\ No newline at end of file
+Index: .idea/misc.xml
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+deleted file mode 100644
+--- a/.idea/misc.xml	(revision 8371ec927c99c1c5d728670c5120e234acea25bd)
++++ /dev/null	(revision 8371ec927c99c1c5d728670c5120e234acea25bd)
+@@ -1,18 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="ExternalStorageConfigurationManager" enabled="true" />
+-  <component name="FrameworkDetectionExcludesConfiguration">
+-    <file type="web" url="file://$PROJECT_DIR$" />
+-  </component>
+-  <component name="MavenProjectsManager">
+-    <option name="originalFiles">
+-      <list>
+-        <option value="$PROJECT_DIR$/pom.xml" />
+-      </list>
+-    </option>
+-  </component>
+-  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="openjdk-17" project-jdk-type="JavaSDK" />
+-  <component name="ProjectType">
+-    <option name="id" value="jpab" />
+-  </component>
+-</project>
+\ No newline at end of file
+Index: .idea/runConfigurations.xml
+===================================================================
+diff --git a/.idea/runConfigurations.xml b/.idea/runConfigurations.xml
+deleted file mode 100644
+--- a/.idea/runConfigurations.xml	(revision 8371ec927c99c1c5d728670c5120e234acea25bd)
++++ /dev/null	(revision 8371ec927c99c1c5d728670c5120e234acea25bd)
+@@ -1,10 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="RunConfigurationProducerService">
+-    <option name="ignoredProducers">
+-      <set>
+-        <option value="com.android.tools.idea.compose.preview.runconfiguration.ComposePreviewRunConfigurationProducer" />
+-      </set>
+-    </option>
+-  </component>
+-</project>
+\ No newline at end of file
+Index: .idea/webContexts.xml
+===================================================================
+diff --git a/.idea/webContexts.xml b/.idea/webContexts.xml
+deleted file mode 100644
+--- a/.idea/webContexts.xml	(revision 8371ec927c99c1c5d728670c5120e234acea25bd)
++++ /dev/null	(revision 8371ec927c99c1c5d728670c5120e234acea25bd)
+@@ -1,10 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="WebContextManager">
+-    <option name="state">
+-      <map>
+-        <entry key="file://$PROJECT_DIR$/src/main/webapp/Pages/navbar.jsp" value="file://$PROJECT_DIR$/src/main/webapp/Pages" />
+-      </map>
+-    </option>
+-  </component>
+-</project>
+\ No newline at end of file
+Index: .idea/sqldialects.xml
+===================================================================
+diff --git a/.idea/sqldialects.xml b/.idea/sqldialects.xml
+deleted file mode 100644
+--- a/.idea/sqldialects.xml	(revision 8371ec927c99c1c5d728670c5120e234acea25bd)
++++ /dev/null	(revision 8371ec927c99c1c5d728670c5120e234acea25bd)
+@@ -1,6 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="SqlDialectMappings">
+-    <file url="PROJECT" dialect="MySQL" />
+-  </component>
+-</project>
+\ No newline at end of file
+Index: .project
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<projectDescription>\r\n\t<name>MiniProjet</name>\r\n\t<comment></comment>\r\n\t<projects>\r\n\t</projects>\r\n\t<buildSpec>\r\n\t\t<buildCommand>\r\n\t\t\t<name>org.eclipse.jdt.core.javabuilder</name>\r\n\t\t\t<arguments>\r\n\t\t\t</arguments>\r\n\t\t</buildCommand>\r\n\t\t<buildCommand>\r\n\t\t\t<name>org.eclipse.wst.common.project.facet.core.builder</name>\r\n\t\t\t<arguments>\r\n\t\t\t</arguments>\r\n\t\t</buildCommand>\r\n\t\t<buildCommand>\r\n\t\t\t<name>org.eclipse.wst.validation.validationbuilder</name>\r\n\t\t\t<arguments>\r\n\t\t\t</arguments>\r\n\t\t</buildCommand>\r\n\t\t<buildCommand>\r\n\t\t\t<name>org.eclipse.m2e.core.maven2Builder</name>\r\n\t\t\t<arguments>\r\n\t\t\t</arguments>\r\n\t\t</buildCommand>\r\n\t</buildSpec>\r\n\t<natures>\r\n\t\t<nature>org.eclipse.m2e.core.maven2Nature</nature>\r\n\t\t<nature>org.eclipse.jem.workbench.JavaEMFNature</nature>\r\n\t\t<nature>org.eclipse.wst.common.modulecore.ModuleCoreNature</nature>\r\n\t\t<nature>org.eclipse.wst.common.project.facet.core.nature</nature>\r\n\t\t<nature>org.eclipse.jdt.core.javanature</nature>\r\n\t\t<nature>org.eclipse.wst.jsdt.core.jsNature</nature>\r\n\t</natures>\r\n</projectDescription>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.project b/.project
+--- a/.project	(revision 8371ec927c99c1c5d728670c5120e234acea25bd)
++++ b/.project	(date 1648415213860)
+@@ -1,6 +1,6 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <projectDescription>
+-	<name>MiniProjet</name>
++	<name>MiniProjet1</name>
+ 	<comment></comment>
+ 	<projects>
+ 	</projects>
+Index: src/main/webapp/WEB-INF/web.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<web-app xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns=\"http://xmlns.jcp.org/xml/ns/javaee\" xsi:schemaLocation=\"http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd\" version=\"4.0\">\r\n  <servlet>\r\n    <description></description>\r\n    <display-name>SignUpSrvlt</display-name>\r\n    <servlet-name>SignUpSrvlt</servlet-name>\r\n    <servlet-class>com.mp.main.SignUpSrvlt</servlet-class>\r\n  </servlet>\r\n  <servlet-mapping>\r\n    <servlet-name>SignUpSrvlt</servlet-name>\r\n    <url-pattern>/SignUpSrvlt</url-pattern>\r\n  </servlet-mapping>\r\n  <display-name>MiniProjet</display-name>\r\n  <welcome-file-list>\r\n    <welcome-file>index.html</welcome-file>\r\n    <welcome-file>index.htm</welcome-file>\r\n    <welcome-file>index.jsp</welcome-file>\r\n    <welcome-file>default.html</welcome-file>\r\n    <welcome-file>default.htm</welcome-file>\r\n    <welcome-file>default.jsp</welcome-file>\r\n    <welcome-file>/Index</welcome-file>\r\n  </welcome-file-list>\r\n</web-app>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/webapp/WEB-INF/web.xml b/src/main/webapp/WEB-INF/web.xml
+--- a/src/main/webapp/WEB-INF/web.xml	(revision 8371ec927c99c1c5d728670c5120e234acea25bd)
++++ b/src/main/webapp/WEB-INF/web.xml	(date 1648415213878)
+@@ -10,7 +10,7 @@
+     <servlet-name>SignUpSrvlt</servlet-name>
+     <url-pattern>/SignUpSrvlt</url-pattern>
+   </servlet-mapping>
+-  <display-name>MiniProjet</display-name>
++  <display-name>MiniProjet1</display-name>
+   <welcome-file-list>
+     <welcome-file>index.html</welcome-file>
+     <welcome-file>index.htm</welcome-file>
+Index: src/main/java/com/mp/main/UserManager.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.mp.main;\r\n\r\nimport java.util.ArrayList;\r\nimport java.util.Iterator;\r\nimport java.util.List;\r\n\r\nimport org.hibernate.HibernateException;\r\nimport org.hibernate.Query;\r\nimport org.hibernate.Session;\r\nimport org.hibernate.SessionFactory;\r\nimport org.hibernate.Transaction;\r\nimport org.hibernate.boot.MetadataSources;\r\nimport org.hibernate.boot.registry.StandardServiceRegistry;\r\nimport org.hibernate.boot.registry.StandardServiceRegistryBuilder;\r\nimport org.hibernate.cfg.Configuration;\r\n\r\npublic class UserManager {\r\n\t protected SessionFactory sessionFactory;\r\n\t \r\n\t    protected void setup() {\r\n\t        // code to load Hibernate Session factory\r\n\t    \tfinal StandardServiceRegistry registry = new StandardServiceRegistryBuilder()\r\n\t    \t        .configure() // configures settings from hibernate.cfg.xml\r\n\t    \t        .build();\r\n\t    \ttry {\r\n\t    \t    sessionFactory = new MetadataSources(registry).buildMetadata().buildSessionFactory();\r\n\t    \t} catch (Exception ex) {\r\n\t    \t    StandardServiceRegistryBuilder.destroy(registry);\r\n\t    \t}\r\n\t    }\r\n\t \r\n\t    protected void exit() {\r\n\t        // code to close Hibernate Session factory\r\n\t    \tsessionFactory.close();\r\n\t    }\r\n\t \r\n\t    protected void create(User user) {\r\n\t        // code to save a book\r\n\t    \tUser userMngr = new User();\r\n\t    \tuserMngr = user;\r\n\t    \tSession session = sessionFactory.openSession();\r\n\t    \tsession.beginTransaction();\r\n\t    \tsession.save(userMngr);\r\n\t    \tsession.getTransaction().commit();\r\n\t    \tsession.close();\r\n\t    }\r\n\t \r\n\t    protected void read() {\r\n\t        // code to get a book\r\n\t    \tSession session = sessionFactory.openSession();\r\n\t    \tsession.beginTransaction();\r\n\t    \tsession.getTransaction().commit();\r\n\t    \tsession.close();\r\n\t    }\r\n\t \r\n\t    protected void update() {\r\n\t        // code to modify a book\r\n\t    \tSession session = sessionFactory.openSession();\r\n\t    \tsession.beginTransaction();\r\n\t    \t\r\n\t    \tsession.getTransaction().commit();\r\n\t    \tsession.close();\r\n\t    }\r\n\t \r\n\t    protected void delete() {\r\n\t        // code to remove a book\r\n\t    \tSession session = sessionFactory.openSession();\r\n\t    \tsession.beginTransaction();\r\n\t    \t\r\n\t    \tsession.getTransaction().commit();\r\n\t    \tsession.close();\r\n\t    }\r\n\t    \r\n\t    public User getUser(String email) {\r\n\t    \tsetup();\r\n\t    \tUser user = new User();\r\n\t    \ttry(Session session = sessionFactory.openSession()){\r\n\t    \t\tsession.beginTransaction();\r\n\t\t    \tuser = (User) session.createQuery(\"from User where email = :email\").setParameter(\"email\", email).getSingleResult();\r\n\t\t    \tsession.getTransaction().commit();\r\n\t    \t} catch (Exception e) {\r\n\t    \t\te.printStackTrace();\r\n\t    \t}\r\n\t    \treturn user;\r\n\t    }\r\n\t    \r\n\t\tpublic List<User> getUsersList(int role) {\r\n\t\t\tsetup();\r\n\t\t\tList<User> users = new ArrayList<User>();\r\n\t\t\ttry(Session session = sessionFactory.openSession()){\r\n\t\t\t\tsession.beginTransaction();\r\n\t\t\t\tusers = session.createQuery(\"FROM User where role=:role\").setParameter(\"role\", role).list();\r\n\t\t\t    for(int i = 0; i < users.size(); i++) {\r\n\t\t\t    \tSystem.out.println(users.get(i).getNom());\r\n\t\t\t    }\r\n\t\t\t\tsession.getTransaction().commit();\r\n\t\t\t} catch (Exception e) {\r\n\t\t\t\te.printStackTrace();\r\n\t\t\t}\r\n\t\t    return users;\r\n\t    }\r\n\t    \r\n\t    public boolean validate(String email, String password) {\r\n\t    \tsetup();\r\n\t        try (Session session = sessionFactory.openSession()) {\r\n\t        \tUser user = new User();\r\n\t            // start a transaction\r\n\t            session.beginTransaction();\r\n\t            // get an user object\r\n\t            user = (User) session.createQuery(\"FROM User WHERE email=:email\").setParameter(\"email\", email)\r\n\t                .uniqueResult();\r\n\t            System.out.println(user.getEmail());\r\n\t            if (user != null && user.getPassword().equals(password)) {\r\n\t                return true;\r\n\t            }\r\n\t            // commit transaction\r\n\t            session.getTransaction().commit();\r\n\t        } catch (Exception e) {\r\n\t        \tSystem.out.println(\"stack :\");\r\n\t        \te.printStackTrace();\r\n\t        }\r\n\t        return false;\r\n\t    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/mp/main/UserManager.java b/src/main/java/com/mp/main/UserManager.java
+--- a/src/main/java/com/mp/main/UserManager.java	(revision 8371ec927c99c1c5d728670c5120e234acea25bd)
++++ b/src/main/java/com/mp/main/UserManager.java	(date 1648415213895)
+@@ -89,11 +89,24 @@
+ 			List<User> users = new ArrayList<User>();
+ 			try(Session session = sessionFactory.openSession()){
+ 				session.beginTransaction();
+-				users = session.createQuery("FROM User where role=:role").setParameter("role", role).list();
+-			    for(int i = 0; i < users.size(); i++) {
+-			    	System.out.println(users.get(i).getNom());
+-			    }
++				users = session.createQuery("FROM User where role = :role").setParameter("role", role).list();
++				session.flush();
+ 				session.getTransaction().commit();
++				session.clear();
++			} catch (Exception e) {
++				e.printStackTrace();
++			}
++		    return users;
++	    }
++		
++		public List<User> getSubsList(int role) {
++			setup();
++			List<User> users = new ArrayList<User>();
++			try(Session session = sessionFactory.openSession()){
++				session.beginTransaction();
++				users = session.createQuery("FROM User where role=:role").setParameter("role", role).list();
++				session.getTransaction().commit();
++				session.close();
+ 			} catch (Exception e) {
+ 				e.printStackTrace();
+ 			}
+Index: src/main/java/com/mp/main/UsersList.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.mp.main;\r\n\r\nimport java.io.IOException;\r\nimport java.util.List;\r\n\r\nimport jakarta.servlet.ServletException;\r\nimport jakarta.servlet.annotation.WebServlet;\r\nimport jakarta.servlet.http.HttpServlet;\r\nimport jakarta.servlet.http.HttpServletRequest;\r\nimport jakarta.servlet.http.HttpServletResponse;\r\nimport jakarta.servlet.http.HttpSession;\r\n\r\n/**\r\n * Servlet implementation class UsersList\r\n */\r\n@WebServlet(\"/Account/UsersList\")\r\npublic class UsersList extends HttpServlet {\r\n\tprivate static final long serialVersionUID = 1L;\r\n       \r\n    /**\r\n     * @see HttpServlet#HttpServlet()\r\n     */\r\n    public UsersList() {\r\n        super();\r\n        // TODO Auto-generated constructor stub\r\n    }\r\n\r\n\t/**\r\n\t * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)\r\n\t */\r\n\tprotected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {\r\n\t\t// TODO Auto-generated method stub\r\n\t\tHttpSession session = request.getSession();\r\n\t\tUser user = (User) session.getAttribute(\"user\");\r\n\t\tUserManager um = new UserManager();\r\n\t\trequest.setAttribute(\"f_name\", user.getPrenom());\r\n\t\trequest.setAttribute(\"l_name\", user.getNom());\r\n\t\trequest.setAttribute(\"role\", user.getRole());\r\n\t\t//request.setAttribute(\"usersList\", um.getUsersList(2));\r\n\t\trequest.setAttribute(\"list\", um.getUsersList(2));\r\n\t\trequest.getRequestDispatcher(\"/Pages/users_list.jsp\").forward(request, response);\r\n\t}\r\n\r\n\t/**\r\n\t * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)\r\n\t */\r\n\tprotected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {\r\n\t\t// TODO Auto-generated method stub\r\n\t}\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/mp/main/UsersList.java b/src/main/java/com/mp/main/UsersList.java
+--- a/src/main/java/com/mp/main/UsersList.java	(revision 8371ec927c99c1c5d728670c5120e234acea25bd)
++++ b/src/main/java/com/mp/main/UsersList.java	(date 1648415213912)
+@@ -37,7 +37,7 @@
+ 		request.setAttribute("l_name", user.getNom());
+ 		request.setAttribute("role", user.getRole());
+ 		//request.setAttribute("usersList", um.getUsersList(2));
+-		request.setAttribute("list", um.getUsersList(2));
++		request.setAttribute("list", um.getUsersList(1));
+ 		request.getRequestDispatcher("/Pages/users_list.jsp").forward(request, response);
+ 	}
+ 
+Index: target/m2e-wtp/web-resources/META-INF/maven/MiniProjet/MiniProjet/pom.properties
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>#Generated by Maven Integration for Eclipse\r\n#Sun Mar 27 08:47:43 WET 2022\r\nm2e.projectLocation=C\\:\\\\Users\\\\herka_lvzfxpq\\\\eclipse-workspace\\\\MiniProjet\r\nm2e.projectName=MiniProjet\r\ngroupId=MiniProjet\r\nartifactId=MiniProjet\r\nversion=0.0.1-SNAPSHOT\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>ISO-8859-1
+===================================================================
+diff --git a/target/m2e-wtp/web-resources/META-INF/maven/MiniProjet/MiniProjet/pom.properties b/target/m2e-wtp/web-resources/META-INF/maven/MiniProjet/MiniProjet/pom.properties
+--- a/target/m2e-wtp/web-resources/META-INF/maven/MiniProjet/MiniProjet/pom.properties	(revision 8371ec927c99c1c5d728670c5120e234acea25bd)
++++ b/target/m2e-wtp/web-resources/META-INF/maven/MiniProjet/MiniProjet/pom.properties	(date 1648415213943)
+@@ -1,7 +1,7 @@
+ #Generated by Maven Integration for Eclipse
+-#Sun Mar 27 08:47:43 WET 2022
+-m2e.projectLocation=C\:\\Users\\herka_lvzfxpq\\eclipse-workspace\\MiniProjet
+-m2e.projectName=MiniProjet
++#Sun Mar 27 21:01:57 WET 2022
++m2e.projectLocation=C\:\\Users\\Fati\\IdeaProjects\\ClubMgmt
++m2e.projectName=MiniProjet1
+ groupId=MiniProjet
+ artifactId=MiniProjet
+ version=0.0.1-SNAPSHOT
+Index: target/m2e-wtp/web-resources/META-INF/MANIFEST.MF
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>Manifest-Version: 1.0\r\nBuild-Jdk-Spec: 11\r\nCreated-By: Maven Integration for Eclipse\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/target/m2e-wtp/web-resources/META-INF/MANIFEST.MF b/target/m2e-wtp/web-resources/META-INF/MANIFEST.MF
+--- a/target/m2e-wtp/web-resources/META-INF/MANIFEST.MF	(revision 8371ec927c99c1c5d728670c5120e234acea25bd)
++++ b/target/m2e-wtp/web-resources/META-INF/MANIFEST.MF	(date 1648415215439)
+@@ -1,4 +1,4 @@
+ Manifest-Version: 1.0
+-Build-Jdk-Spec: 11
++Build-Jdk-Spec: 17
+ Created-By: Maven Integration for Eclipse
+ 
