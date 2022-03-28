@@ -1,4 +1,6 @@
 package com.mp.main;
+import java.util.List;
+
 import javax.persistence.*;
 
 @Entity
@@ -13,11 +15,11 @@ public class User {
     private int role;
     private int account_status;
     
+	@ManyToMany(mappedBy="activities")
+	List<User> activities;
+    
 	public User() {
 	}
-	
-	
-	
 	
 	public User(String nom, String prenom, String email, String password, int role) {
 		super();
@@ -27,8 +29,6 @@ public class User {
 		this.password = password;
 		this.role = role;
 	}
-
-
 
 
 	@Column(name = "l_name")

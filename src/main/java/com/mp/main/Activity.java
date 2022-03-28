@@ -2,6 +2,7 @@ package com.mp.main;
 
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -19,17 +20,18 @@ public class Activity {
 	private String title, description, image;
 	private int id, nbr_participants;
 	
-	@ManyToMany
-	@JoinTable(name = "activities_has_user", joinColumns = @JoinColumn(name = "user_id"), inverseJoinColumns = @JoinColumn(name = "activity_id"))
-	List<User> users_in_activity;
+	@ManyToMany(cascade = { CascadeType.ALL })
+	@JoinTable(
+			name = "activities_has_user", 
+			joinColumns = {@JoinColumn(name = "activity_id")},
+			inverseJoinColumns = {@JoinColumn(name = "user_id")}
+	)	List<User> activities;
 	
 	public Activity() {}
 	
-	public Activity(String title, String description, String image, int nbr_participants) {
+	public Activity(String title, String description) {
 		this.title = title;
 		this.description = description;
-		this.image = image;
-		this.nbr_participants = nbr_participants;
 	}
 
 	public String getTitle() {
