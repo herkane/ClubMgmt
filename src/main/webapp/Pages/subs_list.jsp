@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 
@@ -19,49 +20,44 @@
             <div id="content">
 				<jsp:include page="navbar.jsp" />
                 <div class="container-fluid">
-                    <h3 class="text-dark mb-4">Liste des adhérents</h3>
+                    <h3 class="text-dark mb-4">Liste des adh&eacuterents</h3>
                     <div class="card shadow">
                         <div class="card-header py-3">
-                            <p class="text-primary m-0 fw-bold">Utilisateurs abonnées</p>
+                            <p class="text-primary m-0 fw-bold">Utilisateurs abonn&eacutees</p>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive table mt-2" id="dataTable" role="grid" aria-describedby="dataTable_info">
                                 <table class="table my-0" id="dataTable">
                                     <thead>
                                         <tr>
-                                            <th>Name</th>
-                                            <th>Position</th>
-                                            <th>Office</th>
-                                            <th>Age</th>
-                                            <th>Start date</th>
-                                            <th>Salary</th>
+                                            <th>N.</th>
+                                            <th>Last Name</th>
+                                            <th>First Name</th>
+                                            <th>Email</th>
+                                            <th>Total Users : ${subList.size()}</th>
+                                           
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <%
-                                        	for(int i = 0; i < 10; i++){
-                                        %>
+                                        <%int i = 1;%>
+                                        <c:forEach items="${subList}" var="listItem">
                                         <tr>
-                                            <td><img class="rounded-circle me-2" width="30" height="30" src="<%=request.getContextPath()%>/css/lists_assets/img/avatars/avatar1.jpeg">Airi Satou
-                                            </td>
-                                            <td>Accountant</td>
-                                            <td>Tokyo</td>
-                                            <td>33</td>
-                                            <td>2008/11/28</td>
-                                            <td>$162,700</td>
+                                            <td><strong><%=i%>.</strong>&nbsp<img class="rounded-circle me-2" width="30" height="30" src="<%=request.getContextPath()%>/css/lists_assets/img/avatars/avatar1.jpeg"></td>
+                                            <td><c:out value="${listItem.getPrenom()}"/></td>
+                                            <td><c:out value="${listItem.getNom()}"/></td>
+                                            <td><c:out value="${listItem.getEmail()}"/></td>
                                         </tr>
-                                        <%
-                                        	}
-                                        %>
+                                      <%i++;%>
+                                      </c:forEach>
                                     </tbody>
                                     <tfoot>
                                         <tr>
-                                            <td><strong>Name</strong></td>
-                                            <td><strong>Position</strong></td>
-                                            <td><strong>Office</strong></td>
-                                            <td><strong>Age</strong></td>
-                                            <td><strong>Start date</strong></td>
-                                            <td><strong>Salary</strong></td>
+                                             <th>N.</th>
+                                            <th>Last Name</th>
+                                            <th>First Name</th>
+                                            <th>Email</th>
+                                            <th>Total Users : ${list.size()}</th>
+                                         
                                         </tr>
                                     </tfoot>
                                 </table>
@@ -72,7 +68,7 @@
             </div>
             <footer class="bg-white sticky-footer">
                 <div class="container my-auto">
-                    <div class="text-center my-auto copyright"><span>Copyright © Brand 2022</span></div>
+                    <div class="text-center my-auto copyright"><span>Copyright ï¿½ Brand 2022</span></div>
                 </div>
             </footer>
         </div>

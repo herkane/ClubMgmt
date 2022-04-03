@@ -20,14 +20,14 @@
                     <div class="sidebar-heading">
                         <p class="mb-0">CLUB MANAGMENT</p>
                     </div>
-                    <li class="nav-item"><a class="nav-link" href="<%=request.getContextPath()%>/Account/UsersList"><i
-                                class="fas fa-table"></i><span>&nbsp;User's list</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="<%=request.getContextPath()%>/Account/UsersList">
+                    <i class="fas fa-table"></i><span>&nbsp;User's list</span></a></li>
                                 
                     <li class="nav-item"><a class="nav-link" href="<%=request.getContextPath()%>/Account/SubsList">
                     <i class="fas fa-user-friends"></i><span>&nbsp;Sub's list</span></a></li>
                     
-                    <li class="nav-item"><a class="nav-link" href="<%=request.getContextPath()%>/Account/Activities"><i
-                                class="fas fa-hand-holding-heart"></i><span>Activities</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="<%=request.getContextPath()%>/Account/Activities">
+                    <i class="fas fa-hand-holding-heart"></i><span>Activities</span></a></li>
                                 
                     <li class="nav-item"><a class="nav-link" href="<%=request.getContextPath()%>/Account/Requests">
                     <i class="fas fa-user-clock"></i><span>Membership requests</span></a></li>

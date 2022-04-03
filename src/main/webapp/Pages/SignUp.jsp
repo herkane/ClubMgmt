@@ -20,16 +20,14 @@
   
   <!-- Start: Navigation with Button -->
     <nav class="navbar navbar-light navbar-expand-lg navigation-clean-button">
-        <div class="container"><a class="navbar-brand" href="index.jsp">Company Name</a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle
+        <div class="container"><a class="navbar-brand" href="<%=request.getContextPath()%>/Index">Company Name</a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle
                     navigation</span><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navcol-1">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item"></li>
                     <li class="nav-item"></li>
-                </ul><span class="navbar-text actions"> <a class="btn btn-light action-button" role="button" href="index.jsp"
-                        style="background: #359ae2;border-color: #359ae2;">Home</a></span><span class="navbar-text actions"> <a class="btn btn-light action-button" role="button" href="contact.jsp"
-                        style="color: rgb(0,0,0);border-radius: 20px;background: rgb(255,255,255);border: 2px solid #359ae2;margin: 0;">Contact
-                        Us</a></span>
+                </ul>
+                       
             </div>
         </div>
     </nav>

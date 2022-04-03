@@ -25,14 +25,14 @@
                     <h3 class="text-dark mb-4">Liste des utilisateurs</h3>
                     <div class="card shadow">
                         <div class="card-header py-3">
-                            <p class="text-primary m-0 fw-bold">Utilisateurs non abonnées</p>
+                            <p class="text-primary m-0 fw-bold">Utilisateurs non abonnï¿½es</p>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive table mt-2" id="dataTable" role="grid" aria-describedby="dataTable_info">
                                 <table class="table my-0" id="dataTable">
                                     <thead>
                                         <tr>
-                                        	<th>Nº</th>
+                                        	<th>Nï¿½</th>
                                             <th>Last Name</th>
                                             <th>First Name</th>
                                             <th>Email</th>
@@ -43,7 +43,6 @@
                                             	<%int i = 1;%>
                                             <c:forEach items="${list}" var="listItem">
 		                                        <tr>
-		                                        	
 		                                            <td><strong><%=i%>.</strong>&nbsp<img class="rounded-circle me-2" width="30" height="30" src="<%=request.getContextPath()%>/css/lists_assets/img/avatars/avatar1.jpeg"></td>
 			                                        <td><c:out value="${listItem.getPrenom()}"/></td>
 			                                        <td><c:out value="${listItem.getNom()}"/></td>
@@ -55,7 +54,7 @@
                                     </tbody>
                                     <tfoot>
                                         <tr>
-                                            <td><strong>Nº</strong></td>
+                                            <td><strong>Nï¿½</strong></td>
                                             <td><strong>Last Name</strong></td>
                                             <td><strong>First Name</strong></td>
                                             <td><strong>Email</strong></td>
@@ -70,7 +69,7 @@
             </div>
             <footer class="bg-white sticky-footer">
                 <div class="container my-auto">
-                    <div class="text-center my-auto copyright"><span>Copyright © Brand 2022</span></div>
+                    <div class="text-center my-auto copyright"><span>Copyright ï¿½ Brand 2022</span></div>
                 </div>
             </footer>
         </div>
