@@ -30,19 +30,39 @@ public class Requests extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		HttpSession session = request.getSession();
-		User user = (User) session.getAttribute("user");
-		request.setAttribute("f_name", user.getPrenom());
-		request.setAttribute("l_name", user.getNom());
-		request.setAttribute("role", user.getRole());
-		request.getRequestDispatcher("/Pages/Demandes.jsp").forward(request, response);
+		if(session.getAttribute("user") != null) {
+			User user = (User) session.getAttribute("user");
+			UserManager um = new UserManager();
+			if(user.getRole() == 0) {
+				request.setAttribute("f_name", user.getPrenom());
+				request.setAttribute("l_name", user.getNom());
+				request.setAttribute("role", user.getRole());
+				request.setAttribute("list", um.getRequests());
+				request.getRequestDispatcher("/Pages/requests.jsp").forward(request, response);	
+			} else {
+				response.sendRedirect(request.getContextPath()+"/Account");
+			}
+		} else {
+			response.sendRedirect(request.getContextPath()+"/Account");
+		}
 	}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
+		UserManager um = new UserManager();
+		if(request.getParameter("accept") != null) {
+			System.out.println("Accept");
+			System.out.println("Id : " + request.getParameter("accept"));
+			um.accept(Integer.valueOf(request.getParameter("accept")));
+		}
+		if(request.getParameter("refuse") != null) {
+			System.out.println("Refuse");
+			System.out.println("Id : " + request.getParameter("refuse"));
+			um.decline(Integer.valueOf(request.getParameter("refuse")));
+		}
+		response.sendRedirect(request.getContextPath()+"/Account/Requests");
 	}
 
 }

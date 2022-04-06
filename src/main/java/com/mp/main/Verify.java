@@ -48,12 +48,14 @@ public class Verify extends HttpServlet {
 				String email = (String) session.getAttribute("email");
 				System.out.println(email);
 				User userSession = user.getUser(email);
+				userSession.setAccount_status(1);
+				user.activateAccount(userSession);
 				session.setAttribute("user", userSession);
 				response.sendRedirect(request.getContextPath()+"/Account");		
 				session.removeAttribute("email");
 				session.removeAttribute("gmailCode");
 			} else {
-				response.sendRedirect(request.getContextPath()+"/SignUp/Verify");
+				response.sendRedirect(request.getContextPath()+"/SignUp/Verify?error=1");
 			}
 		} else {
 			response.sendRedirect(request.getContextPath()+"/Account");			

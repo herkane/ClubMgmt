@@ -1,4 +1,5 @@
 package com.mp.main;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.*;
@@ -14,15 +15,54 @@ public class User {
     private int id;
     private int role;
     private int account_status;
-    
-	@ManyToMany(mappedBy="activities")
-	List<User> activities;
+    private List<Activity> activities;
+    private String gmailCode;
+
+	@OneToOne(mappedBy = "user")
+	public Request getRequest() {
+		return request;
+	}
+	
+	
+	@ManyToMany(mappedBy = "users")
+	public List<Activity> getActivities() {
+		return activities;
+	}
+	
+	
+
+
+
+	
+
+
+	public String getGmailCode() {
+		return gmailCode;
+	}
+
+
+	public void setGmailCode(String gmailCode) {
+		this.gmailCode = gmailCode;
+	}
+
+
+	public void setActivities(List<Activity> activities) {
+		this.activities = activities;
+	}
+
+
+
+	public void setRequest(Request request) {
+		this.request = request;
+	}
+
+	private Request request;
+
     
 	public User() {
 	}
 	
 	public User(String nom, String prenom, String email, String password, int role) {
-		super();
 		this.nom = nom;
 		this.prenom = prenom;
 		this.email = email;
@@ -87,7 +127,21 @@ public class User {
 		this.account_status = account_status;
 	}
 	
-	
+	@Override
+	public boolean equals(Object obj) {
+
+	if (obj == this) {
+	    return true;
+	}
+
+	if (!(obj instanceof User)) {
+	    return false;
+	}
+
+	User other = (User) obj;
+
+	return getId() == other.getId();
+	}
 	
 	
     

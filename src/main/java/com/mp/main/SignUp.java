@@ -32,7 +32,12 @@ public class SignUp extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-			request.getRequestDispatcher("/Pages/SignUp.jsp").forward(request, response);
+			HttpSession session = request.getSession();
+			if(session.getAttribute("user") != null) {
+				response.sendRedirect(request.getContextPath()+"/Account");
+			} else {
+				request.getRequestDispatcher("/Pages/SignUp.jsp").forward(request, response);
+			}
 	}
 
 	/**
@@ -50,10 +55,11 @@ public class SignUp extends HttpServlet {
 				String pwd = request.getParameter("password").trim();
 				int role = 2;
 				User user = new User(f_name, l_name, email, pwd, role);
+				gmailCode = String.valueOf(Math.round(Math.random() * 100000));
+				user.setGmailCode(gmailCode);
 				userMngr.setup();
 				userMngr.create(user);
 				userMngr.exit();
-				gmailCode = String.valueOf(Math.round(Math.random() * 100000));
 				try {
 					send.main(email,gmailCode);
 				} catch (Exception e) {
@@ -65,10 +71,10 @@ public class SignUp extends HttpServlet {
 				session.setAttribute("email", email);
 				response.sendRedirect(request.getContextPath()+"/SignUp/Verify");
 			} else {
-				request.getRequestDispatcher("/SignUp/Verify").forward(request, response);
+				response.sendRedirect(request.getContextPath()+"/SignUp/Verify");
 			}
 		} else {
-			request.getRequestDispatcher("/Account").forward(request, response);
+			response.sendRedirect(request.getContextPath()+"/Account");
 		}
 	}
 

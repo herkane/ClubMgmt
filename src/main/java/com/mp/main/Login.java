@@ -45,13 +45,25 @@ public class Login extends HttpServlet {
 			String pwd = request.getParameter("password").trim();
 			if(user.validate(email, pwd)) {
 				User userSession = user.getUser(email); 
-				session.setAttribute("user", userSession);
-				System.out.println("Login success");
-				response.sendRedirect(request.getContextPath()+"/Account");
+				if(userSession.getAccount_status() == 1) {
+					session.setAttribute("user", userSession);
+					System.out.println("Login success");
+					response.sendRedirect(request.getContextPath()+"/Account");
+				} else if (userSession.getAccount_status() ==  0) {
+					// Unverified Account
+					session.setAttribute("gmailCode", userSession.getGmailCode());
+					session.setAttribute("email", email);
+					response.sendRedirect(request.getContextPath()+"/SignUp/Verify");
+				} else if (userSession.getAccount_status() == 2) {
+					// Disabled account
+					response.sendRedirect(request.getContextPath()+"/Login?error=2");
+				}
 			} else {
-				response.sendRedirect(request.getContextPath()+"/Login");
+				// Wrong credentials
+				response.sendRedirect(request.getContextPath()+"/Login?error=3");
 			}
 		} else {
+			//Already logged in
 			response.sendRedirect(request.getContextPath()+"/Account");
 		}
 	}

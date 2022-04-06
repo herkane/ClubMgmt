@@ -21,12 +21,11 @@
                     <h2 class="text-info" style="font-size: 34.128px;">Join us in our club</h2>
                     <p>You will make the payment and a request to the president will be sent, you will have an answer for 3 days maximum</p>
                 </div>
-                <form>
+                <form action="<%=request.getContextPath()%>/Account/JoinUs" method="post">
                     <div class="products">
                         <h3 class="title">Checkout</h3>
                         <div class="item"><span class="price">150 MAD</span>
                             <p class="item-name">Club Membership</p>
-                            <p class="item-description">Lorem ipsum dolor sit amet</p>
                         </div>
                     </div>
                     <div class="card-details">
@@ -47,7 +46,7 @@
                                 <div class="mb-3"><label class="form-label" for="cvc">CVC</label><input class="form-control" type="text" id="cvc" placeholder="CVC" name="cvc"></div>
                             </div>
                             <div class="col-sm-12">
-                                <div class="mb-3"><button class="btn btn-primary d-block w-100" type="submit">Proceed</button></div>
+                                <div class="mb-3"><button class="btn btn-primary d-block w-100" type="submit" value="${id}" name="id">Proceed</button></div>
                             </div>
                         </div>
                     </div>

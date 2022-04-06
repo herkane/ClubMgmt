@@ -14,6 +14,8 @@
         
     <mapping class="com.mp.main.User" />
     <mapping class="com.mp.main.Activity" />
+    <mapping class="com.mp.main.Request" />
+   <mapping class="com.mp.main.ActivityUser" />
      
   </session-factory>
 </hibernate-configuration>

@@ -24,7 +24,7 @@
                             <div class="d-none d-sm-block topbar-divider"></div>
                             <li class="nav-item dropdown no-arrow">
                                 <div class="nav-item dropdown no-arrow"><a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown" href="#"><span
-                                            class="d-none d-lg-inline me-2 text-gray-600 small">${user.getNom()} ${user.getPrenom()}</span><img
+                                            class="d-none d-lg-inline me-2 text-gray-600 small">${user.getPrenom()} ${user.getNom()}</span><img
                                             class="border rounded-circle img-profile"
                                             src="<%=request.getContextPath()%>/css/dashboard_assets/img/avatars/avatar1.jpeg"></a>
                                     <div class="dropdown-menu shadow dropdown-menu-end animated--grow-in"><a class="dropdown-item" href="<%=request.getContextPath()%>/Account/Profile"><i

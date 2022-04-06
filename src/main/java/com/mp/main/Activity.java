@@ -1,14 +1,18 @@
 package com.mp.main;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.JoinColumns;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.Table;
@@ -17,21 +21,30 @@ import javax.persistence.Table;
 @Table(name="activities")
 
 public class Activity {
-	private String title, description, image;
+	private String title, description;
 	private int id, nbr_participants;
-	
-	@ManyToMany(cascade = { CascadeType.ALL })
-	@JoinTable(
-			name = "activities_has_user", 
-			joinColumns = {@JoinColumn(name = "activity_id")},
-			inverseJoinColumns = {@JoinColumn(name = "user_id")}
-	)	List<User> activities;
-	
+	private List<User> users;
+
 	public Activity() {}
 	
 	public Activity(String title, String description) {
 		this.title = title;
 		this.description = description;
+	}
+	
+	
+	@ManyToMany(fetch = FetchType.EAGER)
+	@JoinTable(
+			name = "user_activities",
+			joinColumns = @JoinColumn(name="activity_id"),
+			inverseJoinColumns = @JoinColumn(name="user_id")
+	)
+	public List<User> getUsers() {
+		return users;
+	}
+
+	public void setUsers(List<User> users) {
+		this.users = users;
 	}
 
 	public String getTitle() {
@@ -46,15 +59,9 @@ public class Activity {
 	public void setDescription(String description) {
 		this.description = description;
 	}
-	public String getImage() {
-		return image;
-	}
-	public void setImage(String image) {
-		this.image = image;
-	}
 	
 	@Id
-	@Column(name="id")
+	@Column(name="activity_id")
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	public int getId() {
 		return id;

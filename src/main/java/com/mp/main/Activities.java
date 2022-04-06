@@ -31,9 +31,12 @@ public class Activities extends HttpServlet {
 		// TODO Auto-generated method stub
 		HttpSession session = request.getSession();
 		User user = (User) session.getAttribute("user");
+		UserManager um = new UserManager();
 		request.setAttribute("f_name", user.getPrenom());
 		request.setAttribute("l_name", user.getNom());
 		request.setAttribute("role", user.getRole());
+		request.setAttribute("act_list", um.getActivities());
+
 		request.getRequestDispatcher("/Pages/activities.jsp").forward(request, response);
 	}
 

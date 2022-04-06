@@ -68,11 +68,15 @@
                     <i class="fas fa-user-friends"></i><span>&nbsp;Our members</span></a></li>
                     
                     <li class="nav-item"><a class="nav-link" href="<%=request.getContextPath()%>/Account/Activities">
-                    <i class="fas fa-hand-holding-heart"></i><span>Our activities</span></a></li>
-                    
-                    <hr class="sidebar-divider">
-                    <li class="nav-item"><a class="nav-link" href="<%=request.getContextPath()%>/Account/JoinUs">
-                    <i class="fas fa-crown"></i><span>Join us</span></a></li>
+                    <i class="fas fa-hand-holding-heart"></i><span>Our activities</span></a></li>                    
+		                    <hr class="sidebar-divider">
+	                    <%if(request.getAttribute("request_status") == null){ %>
+		                    <li class="nav-item"><a class="nav-link" href="<%=request.getContextPath()%>/Account/JoinUs">
+		                    <i class="fas fa-crown"></i><span>Join us</span></a></li>
+	                    <%} else {%>
+		                    <li class="nav-item"><a class="nav-link" href="">
+		                    <i class="fas fa-user-clock"></i><span>PENDING</span></a></li>
+	                    <%} %>
                     <%} %>
                 </ul>
                 <div class="text-center d-none d-md-inline"><button class="btn rounded-circle border-0" id="sidebarToggle" type="button"></button></div>

@@ -30,12 +30,18 @@ public class Profile extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		HttpSession session = request.getSession();
+		if(session.getAttribute("user") != null) {
 		User user = (User) session.getAttribute("user");
 		request.setAttribute("f_name", user.getPrenom());
 		request.setAttribute("l_name", user.getNom());
 		request.setAttribute("role", user.getRole());
 		request.setAttribute("email", user.getEmail());
+		request.setAttribute("id", user.getId());
+		request.setAttribute("isCurrU", true);
 		request.getRequestDispatcher("/Pages/Profile.jsp").forward(request, response);
+		} else {
+			response.sendRedirect(request.getContextPath()+"/Index");
+		}
 	}
 
 	/**
@@ -43,6 +49,28 @@ public class Profile extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		HttpSession session = request.getSession();
+		if(session.getAttribute("user") != null) {
+			String f_name = request.getParameter("f_name").trim();
+			String l_name = request.getParameter("l_name").trim();
+			int id = Integer.parseInt(request.getParameter("id"));
+			UserManager userManager = new UserManager();
+			User user = (User) userManager.getUserById(id);
+			String password = user.getPassword();
+			if(!request.getParameter("password").isEmpty()) {				
+				password = request.getParameter("password");
+			}
+			user.setNom(l_name);
+			user.setPrenom(f_name);
+			user.setPassword(password);
+			userManager.updateUser(user);
+			session.removeAttribute("user");
+			session.setAttribute("user", user);
+			response.sendRedirect(request.getContextPath()+"/Account");
+		} else {
+			response.sendRedirect(request.getContextPath()+"/Index");
+		}
+		
 	}
 
 }

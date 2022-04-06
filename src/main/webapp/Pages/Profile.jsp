@@ -9,12 +9,10 @@
       content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
     />
     <title>Profile - Brand</title>
-    <link
-      rel="stylesheet"
+    <link rel="stylesheet"
       href="<%=request.getContextPath() %>/css/profil_assets/bootstrap/css/bootstrap.min.css?h=81031c597b710e11aee3122e1bd58298"
     />
-    <link
-      rel="stylesheet"
+    <link rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
     />
     <link
@@ -31,7 +29,7 @@
         <div id="content">
           <jsp:include page="navbar.jsp"/>
           <div class="container-fluid">
-            <h3 class="text-dark mb-4">Profil</h3>
+            <h3 class="text-dark mb-4">Profile</h3>
             <div class="row mb-3">
               <div class="col-lg-4">
                 <div class="card mb-3">
@@ -98,20 +96,18 @@
                         <p class="text-primary m-0 fw-bold">User Settings</p>
                       </div>
                       <div class="card-body">
-                        <form>
+                        <form action="<%=request.getContextPath()%>/Account/Profile" method="post">
                           <div class="row">
                             <div class="col">
                               <div class="mb-3">
                                 <label class="form-label" for="first_name"
-                                  ><strong>Pr&eacutenom</strong></label
-                                ><input
-                                  class="form-control"
+                                  ><strong>Pr&eacutenom</strong></label>
+                                  <input class="form-control"
                                   type="text"
                                   id="first_name"
                                   value="<%=request.getAttribute("f_name")%>"
                                   placeholder="Fatima"
-                                  name="first_name"
-                                />
+                                  name="f_name" />
                               </div>
                             </div>
                             <div class="col">
@@ -124,7 +120,7 @@
                                   id="last_name"
                                     value="<%=request.getAttribute("l_name")%>"
                                   placeholder="El hadeg"
-                                  name="last_name"
+                                  name="l_name"
                                 />
                               </div>
                             </div>
@@ -154,20 +150,48 @@
                                   type="password"
                                   id="username"
                                   placeholder="Password"
-                                  name="username"
+                                  name="password"
                                 />
                               </div>
                             </div>
                           </div>
-                          <div class="mb-3">
-                            <button
-                              class="btn btn-primary btn-sm"
-                              type="submit"
-                            >
-                              Enregistrer
-                            </button>
-                          </div>
+                          	<%if(request.getAttribute("isCurrU").equals(true)){%>
+	                          	<div class="mb-3">
+				                            <button
+				                            name="id"
+				                            value="<%=request.getAttribute("id") %>"
+				                              class="btn btn-primary btn-sm"
+				                              type="submit" >
+				                              Update
+				                            </button>
+				                          </div>
+                          	<%}%>
                         </form>
+                        <%if(request.getAttribute("role").equals(0)){%>
+                        <%if(request.getAttribute("isCurrU").equals(false)){%>
+                        <div style="display: flex;">
+                        	<form style="margin: 5px" action="<%=request.getContextPath()%>/Account/DisableAcc" method="post">
+                        <button
+                        	name="disable"
+                        	value="<%=request.getAttribute("id") %>"
+                              class="btn btn-danger btn-sm"
+                              type="submit" >
+                              Disable
+                            </button>
+                            </form>
+                            <form style="margin: 5px" action="<%=request.getContextPath()%>/Account/EnableAcc" method="post">
+                            <button
+                            name="enable"
+                              	value="<%=request.getAttribute("id") %>"
+                              style="color: white"
+                              class="btn btn-success btn-sm"
+                              type="submit" >
+                              Enable
+                            </button>
+                            </form>
+                        </div>
+                        <%}%>
+                        <%}%>
                       </div>
                     </div>
                     
@@ -180,7 +204,7 @@
         <footer class="bg-white sticky-footer">
           <div class="container my-auto">
             <div class="text-center my-auto copyright">
-              <span>Copyright Â© Brand 2022</span>
+              <span>Copyright © Brand 2022</span>
             </div>
           </div>
         </footer>

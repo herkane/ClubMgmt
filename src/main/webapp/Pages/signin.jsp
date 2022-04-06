@@ -39,7 +39,20 @@
                             <div class="col-lg-6">
                                 <div class="p-5">
                                     <div class="text-center">
-                                        <h4 class="text-dark mb-4">Welcome Back!</h4>
+                                    <h4 class="text-dark mb-4">Welcome Back!</h4>
+                                     <%if(request.getParameter("error") != null){ %>
+										<%if(request.getParameter("error").equals("2")){ %>
+												<div class="alert alert-danger" role="alert">
+												  Disabled account, please talk to your president.
+												</div>                                       
+										<%}%>                                    
+										<%if(request.getParameter("error").equals("3")){ %>
+												<div class="alert alert-danger" role="alert">
+												  Wrong credentials.
+												</div>                                       
+										<%}%>                                    
+									<%}%>
+										
                                     </div>
                                     <form class="user" action="<%=request.getContextPath()%>/Login" method="POST">
                                         <div class="mb-3"><input class="form-control form-control-user" type="email" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Enter Email Address..." name="email"></div>

@@ -17,6 +17,8 @@
 
 <body id="page-top">
     <div id="wrapper">
+                              <jsp:include page="admin_sidebar.jsp" />  
+    
         <div class="d-flex flex-column" id="content-wrapper">
             <div id="content">
                           <jsp:include page="navbar.jsp" />  

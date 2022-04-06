@@ -41,12 +41,15 @@
                                     <tbody>
                                         <%int i = 1;%>
                                         <c:forEach items="${subList}" var="listItem">
-                                        <tr>
-                                            <td><strong><%=i%>.</strong>&nbsp<img class="rounded-circle me-2" width="30" height="30" src="<%=request.getContextPath()%>/css/lists_assets/img/avatars/avatar1.jpeg"></td>
-                                            <td><c:out value="${listItem.getPrenom()}"/></td>
-                                            <td><c:out value="${listItem.getNom()}"/></td>
-                                            <td><c:out value="${listItem.getEmail()}"/></td>
-                                        </tr>
+                                          <form action="<%=request.getContextPath()%>/Account/UsersList/UserInfo" method="POST">
+	                                        <tr>
+	                                            <td><strong><%=i%>.</strong>&nbsp<img class="rounded-circle me-2" width="30" height="30" src="<%=request.getContextPath()%>/css/lists_assets/img/avatars/avatar1.jpeg"></td>
+	                                            <td><c:out value="${listItem.getPrenom()}"/></td>
+	                                            <td><c:out value="${listItem.getNom()}"/></td>
+	                                            <td><c:out value="${listItem.getEmail()}"/></td>
+	                                            <td><button style="border: none; background-color: transparent" name="id" value="${listItem.getId()}" type="submit"><i class="fa fa-eye" style="background: none" aria-hidden="true"></i>
+	                                        </tr>
+                                        </form>
                                       <%i++;%>
                                       </c:forEach>
                                     </tbody>
@@ -56,7 +59,7 @@
                                             <th>Last Name</th>
                                             <th>First Name</th>
                                             <th>Email</th>
-                                            <th>Total Users : ${list.size()}</th>
+                                            <th>Total Users : ${subList.size()}</th>
                                          
                                         </tr>
                                     </tfoot>

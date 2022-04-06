@@ -32,9 +32,14 @@ public class Account extends HttpServlet {
 		HttpSession session = request.getSession();
 		if(session.getAttribute("user") != null) {
 			User user = (User) session.getAttribute("user");
+			UserManager um = new UserManager();
+			user = um.getUser(user.getEmail());
 			request.setAttribute("f_name", user.getPrenom());
 			request.setAttribute("l_name", user.getNom());
 			request.setAttribute("role", user.getRole());		
+			if(user.getRole() == 2 && user.getRequest() != null) {
+				request.setAttribute("request_status", user.getRequest().getStatus());
+			}
 			request.getRequestDispatcher("/Pages/Dashboard.jsp").forward(request, response);
 		} else {
 			response.sendRedirect(request.getContextPath()+"/Index");
