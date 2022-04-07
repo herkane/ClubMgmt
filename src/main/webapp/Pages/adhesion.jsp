@@ -6,7 +6,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Payment - Brand</title>
+    <title>Payment - MyClub</title>
     <link rel="stylesheet" href="../css/adhesion_assets/bootstrap/css/bootstrap.min.css?h=11ac1ec3fb3954cebf1fdd43cbdb6204">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
@@ -58,7 +58,7 @@
     <!-- Start: Footer Dark -->
     <footer class="page-footer dark" style="padding-top: -0px;">
         <div class="footer-copyright">
-            <p>© 2022 Copyright Text</p>
+            <p>ï¿½ 2022 Copyright Text</p>
         </div>
     </footer>
     <!-- End: Footer Dark -->

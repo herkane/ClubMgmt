@@ -6,7 +6,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Blank Page - Brand</title>
+    <title>Blank Page - MyClub</title>
     <link rel="stylesheet" href="<%=request.getContextPath()%>/css/activities_assets/bootstrap/css/bootstrap.min.css?h=11ac1ec3fb3954cebf1fdd43cbdb6204">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
@@ -21,7 +21,7 @@
            <jsp:include page="navbar.jsp" />  
             <div id="content">
                 <div class="container-fluid">
-                    <h3 class="text-dark mb-1">Activités</h3>
+                    <h3 class="text-dark mb-1">Activitï¿½s</h3>
                 </div>
                 <!-- Start: Article List -->
                 <section class="article-list">
@@ -49,7 +49,7 @@
             </div>
             <footer class="bg-white sticky-footer">
                 <div class="container my-auto">
-                    <div class="text-center my-auto copyright"><span>Copyright © Brand 2022</span></div>
+                    <div class="text-center my-auto copyright"><span>Copyright ï¿½ MyClub 2022</span></div>
                 </div>
             </footer>
         </div><a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a>

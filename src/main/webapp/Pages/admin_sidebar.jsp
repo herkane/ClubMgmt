@@ -7,7 +7,7 @@
             <div class="container-fluid d-flex flex-column p-0" style="position: sticky;top: 0">
                 <a class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0" href="Dashboard.jsp">
                     <div class="sidebar-brand-icon rotate-n-15"><i class="fas fa-laugh-wink"></i></div>
-                    <div class="sidebar-brand-text mx-3"><span>BRAND</span></div>
+                    <div class="sidebar-brand-text mx-3"><span>MyClub</span></div>
                 </a>
                 <hr class="sidebar-divider my-0">
                 <ul class="navbar-nav text-light" id="accordionSidebar" style="height: 400px;margin-top: 0px;margin-bottom: 50px">

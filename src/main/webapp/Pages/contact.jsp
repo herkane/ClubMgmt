@@ -7,7 +7,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
     />
-    <title>Contact Us - Brand</title>
+    <title>Contact Us - MyClub</title>
     <link
       rel="stylesheet"
       href="../css/contact_assets/bootstrap/css/bootstrap.min.css?h=81031c597b710e11aee3122e1bd58298"
@@ -30,7 +30,7 @@
 <body style="height: auto">
     <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar" style="background: var(--bs-blue); height: 60px; padding: 0px">
         <div class="container">
-            <a class="navbar-brand logo" href="index.jsp">Brand</a
+            <a class="navbar-brand logo" href="index.jsp">MyClub</a
         ><button
           data-bs-toggle="collapse"
           class="navbar-toggler"

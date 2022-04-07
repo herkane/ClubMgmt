@@ -32,7 +32,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
     />
-    <title>Services - Brand</title>
+    <title>Services - MyClub</title>
     <link
       rel="stylesheet"
       href="<%=request.getContextPath()%>/css/demandes_assets/bootstrap/css/bootstrap.min.css?h=81031c597b710e11aee3122e1bd58298"
@@ -55,7 +55,7 @@
       class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar"
     >
       <div class="container">
-        <a class="navbar-brand logo" href="Dashboard.jsp">Brand</a
+        <a class="navbar-brand logo" href="Dashboard.jsp">MyClub</a
         ><button
           data-bs-toggle="collapse"
           class="navbar-toggler"

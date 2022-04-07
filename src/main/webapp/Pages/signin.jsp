@@ -6,7 +6,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Login - Brand</title>
+    <title>Login - MyClub</title>
     <link rel="stylesheet" href="<%=request.getContextPath()%>/css/signin_assets/bootstrap/css/bootstrap.min.css?h=1195d539be9b8ad00796352c8f2b6362">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
     <link rel="stylesheet" href="<%=request.getContextPath()%>/css/signin_assets/css/styles.min.css?h=51fe63593838648bb219f3824fc7486c">
@@ -15,16 +15,13 @@
 <body class="bg-gradient-primary" style="background: rgb(255, 255, 255)">
     <!-- Start: Navigation with Button -->
     <nav class="navbar navbar-light navbar-expand-lg navigation-clean-button" >
-        <div class="container"><a class="navbar-brand" href="index.jsp">Company Name</a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle
+        <div class="container"><a class="navbar-brand" href="<%=request.getContextPath()%>/Index">MyClub</a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle
                     navigation</span><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navcol-1">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item"></li>
                     <li class="nav-item"></li>
-                </ul><span class="navbar-text actions"> <a class="btn btn-light action-button" role="button" href="index.jsp"
-                        style="background: #359ae2;border-color: #359ae2;">Home</a></span><span class="navbar-text actions"> <a class="btn btn-light action-button" role="button" href="contact.jsp"
-                        style="color: rgb(0,0,0);border-radius: 20px;background: rgb(255,255,255);border: 2px solid #359ae2;margin: 0;">Contact
-                        Us</a></span>
+                </ul>
             </div>
         </div>
     </nav>
@@ -55,7 +52,7 @@
                                         <hr>
                                     </form>
                                     <div class="text-center"></div>
-                                    <div class="text-center"><a class="small" href="SignUp.jsp" style="color: rgb(0,0,0);">Create an Account!</a></div>
+                                    <div class="text-center"><a class="small" href="<%=request.getContextPath()%>/SignUp" style="color: rgb(0,0,0);">Create an Account!</a></div>
                                 </div>
                             </div>
                         </div>

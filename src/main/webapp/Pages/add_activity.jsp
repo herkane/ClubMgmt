@@ -6,7 +6,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Add activity - Brand</title>
+    <title>Add activity - MyClub</title>
     <link rel="stylesheet" href="<%=request.getContextPath()%>/css/add_activity_assets/bootstrap/css/bootstrap.min.css?h=0fb8bd8be55fcb7d9fa56b433c56b9ff">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
@@ -40,7 +40,7 @@
             </div>
             <footer class="bg-white sticky-footer">
                 <div class="container my-auto">
-                    <div class="text-center my-auto copyright"><span>Copyright © Brand 2022</span></div>
+                    <div class="text-center my-auto copyright"><span>Copyright ï¿½ MyClub 2022</span></div>
                 </div>
             </footer>
         </div><a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a>

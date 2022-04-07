@@ -8,7 +8,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
     />
-    <title>Home - Brand</title>
+    <title>Home - MyClub</title>
     <link
       rel="stylesheet"
       href="<%=request.getContextPath()%>/css/home_assets/bootstrap/css/bootstrap.min.css?h=a4a4b4ec2caaeea34fdeabb9e8eaf2dd"
@@ -51,7 +51,7 @@
   >
     <nav class="navbar navbar-light navbar-expand-md fixed-top" id="mainNav">
       <div class="container">
-        <a class="navbar-brand" href="#">Brand</a
+        <a class="navbar-brand" href="#">MyClub</a
         ><button
           data-bs-toggle="collapse"
           class="navbar-toggler navbar-toggler-right"
@@ -89,11 +89,12 @@
         <div class="container">
           <div class="row">
             <div class="col-lg-8 mx-auto">
-              <h1 class="brand-heading">grayscale</h1>
+              <h1 class="brand-heading"><br>MyClub</h1>
               <p class="intro-text">
-                A free, responsive, one page Bootstrap theme.<br />Created with
+               With MyClub you have everything you want.<br />Created with
                 love.
               </p>
+             
               <button class="button navbar-toggler navbar-toggler-right"> <a href="<%=request.getContextPath()%>/Login" style="text-decoration:none;color:white">Login</a></button>
               <button class="button navbar-toggler navbar-toggler-right"> <a href="<%=request.getContextPath()%>/SignUp" style="text-decoration:none;color:white">Register</a></button>
             </div>
@@ -105,9 +106,11 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-8 mx-auto">
-            <h2>About grayscale</h2>
+            <h2>About MyClub</h2>
             <p>
-             Hi!! Achraf, m Fatima
+           MyClub is very easy to learn and is ideal for clubs and many others  i.e. any association, 
+           club or group of people who share a common interest 
+           and who wish to manage their organization in a simple and efficient way to the future
             </p>
            
           </div>
@@ -126,7 +129,7 @@
       <div class="container">
         <div class="col-lg-8 mx-auto">
           <!-- Start: Contact Form Clean -->
-          <section class="contact-clean" style="padding: 0; width: 549px; text-align:-webkit-center;">
+          <section class="contact-clean" style="padding: 0;  text-align:-webkit-center;">
             <form method="post" style="margin: 0;background-color: #ffffff26; color:white; box-shadow: 1px 1px 5px rgb(0 0 0 / 10%);">
               <h2 class="text-center">Contact us</h2>
               <!-- Start: Success Example -->
@@ -171,9 +174,7 @@
           <div class="col-lg-8 mx-auto">
             <h2>get in touch</h2>
             <p>
-              Feel free to leave us a comment on the<a href="#"
-                >&nbsp;Grayscale template overview page</a
-              >&nbsp;to give some feedback about this theme!
+              Feel free to leave us a comment to give some feedback !
             </p>
             <ul class="list-inline banner-social-buttons">
               <li class="list-inline-item">
@@ -181,8 +182,8 @@
                   class="btn btn-primary btn-lg btn-default"
                   type="button"
                 >
-                  <i class="fa fa-google-plus fa-fw"></i
-                  ><span class="network-name">&nbsp; Google+</span>
+                  <i class="fa fa-facebook-square"></i
+                  ><span class="network-name"><a href="https://www.facebook.com/achraf.herkane" style="text-decoration:none"> Facebook</a></span>
                 </button>
               </li>
               <li class="list-inline-item">
@@ -190,8 +191,8 @@
                   class="btn btn-primary btn-lg btn-default"
                   type="button"
                 >
-                  <i class="fa fa-twitter fa-fw"></i
-                  ><span class="network-name">&nbsp;Twitter</span>
+                  <i class="fa fa-instagram"></i
+                  ><span class="network-name"><a href="https://www.instagram.com/f.a.t.i_m.aa" style="text-decoration:none"> Insta</a></span>
                 </button>
               </li>
               <li class="list-inline-item">
@@ -210,7 +211,7 @@
     </section>
     <footer>
       <div class="container text-center">
-        <p>Copyright ©&nbsp;Brand 2022</p>
+        <p>Copyright ©&nbsp;MyClub 2022</p>
       </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>

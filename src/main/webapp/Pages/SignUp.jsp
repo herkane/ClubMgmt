@@ -7,7 +7,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
     />
-    <title>Register - Brand</title>
+    <title>Register - MyClub</title>
     <link rel="stylesheet" href="<%=request.getContextPath()%>/css/signup_assets/bootstrap/css/bootstrap.min.css?h=6a70c3ae7291ddf5d046c5eed886e957" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
     <link rel="stylesheet" href="<%=request.getContextPath()%>/css/signin_assets/css/styles.min.css?h=51fe63593838648bb219f3824fc7486c">
@@ -20,16 +20,13 @@
   
   <!-- Start: Navigation with Button -->
     <nav class="navbar navbar-light navbar-expand-lg navigation-clean-button">
-        <div class="container"><a class="navbar-brand" href="index.jsp">Company Name</a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle
+        <div class="container"><a class="navbar-brand" href="<%=request.getContextPath()%>/Index">MyClub</a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle
                     navigation</span><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navcol-1">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item"></li>
                     <li class="nav-item"></li>
-                </ul><span class="navbar-text actions"> <a class="btn btn-light action-button" role="button" href="index.jsp"
-                        style="background: #359ae2;border-color: #359ae2;">Home</a></span><span class="navbar-text actions"> <a class="btn btn-light action-button" role="button" href="contact.jsp"
-                        style="color: rgb(0,0,0);border-radius: 20px;background: rgb(255,255,255);border: 2px solid #359ae2;margin: 0;">Contact
-                        Us</a></span>
+                </ul>
             </div>
         </div>
     </nav>
