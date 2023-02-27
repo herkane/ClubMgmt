@@ -1,19 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-11">
-		<attributes>
-			<attribute name="maven.pomderived" value="true"/>
-		</attributes>
-	</classpathentry>
 	<classpathentry kind="src" output="target/classes" path="src/main/java">
 		<attributes>
 			<attribute name="optional" value="true"/>
 			<attribute name="maven.pomderived" value="true"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="con" path="org.eclipse.jst.server.core.container/org.eclipse.jst.server.tomcat.runtimeTarget/Apache Tomcat v10.0">
-		<attributes>
-			<attribute name="owner.project.facets" value="jst.web"/>
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="src" output="target/test-classes" path="src/test/java">
@@ -21,6 +11,16 @@
 			<attribute name="test" value="true"/>
 			<attribute name="optional" value="true"/>
 			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-11">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jst.server.core.container/org.eclipse.jst.server.tomcat.runtimeTarget/Apache Tomcat v10.0">
+		<attributes>
+			<attribute name="owner.project.facets" value="jst.web"/>
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
@@ -32,6 +32,15 @@
 	<classpathentry kind="lib" path="C:/apache-tomcat-10.0.13/lib/servlet-api.jar">
 		<attributes>
 			<attribute name="javadoc_location" value="https://jakarta.ee/specifications/servlet/5.0/apidocs/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/Hibernate"/>
+	<classpathentry kind="lib" path="C:/Users/herka_lvzfxpq/.m2/repository/mysql/mysql-connector-java/8.0.25/mysql-connector-java-8.0.25.jar"/>
+	<classpathentry kind="lib" path="C:/Users/herka_lvzfxpq/Desktop/jakarta.servlet.jsp.jstl-2.0.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/herka_lvzfxpq/Desktop/jakarta.servlet.jsp.jstl-api-2.0.0.jar"/>
+	<classpathentry excluding="**" kind="src" output="target/classes" path="src/main/resources">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="output" path="target/classes"/>

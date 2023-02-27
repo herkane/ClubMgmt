@@ -1,111 +1,220 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
     <title>Home - Brand</title>
-    <link rel="stylesheet" href="../css/home_assets/bootstrap/css/bootstrap.min.css?h=1195d539be9b8ad00796352c8f2b6362" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+Inscriptional+Pahlavi&amp;display=swap" />
-    <link rel="stylesheet" href="../css/home_assets/css/styles.min.css?h=3fc31f56e195fbb19e41e3098a499bcb" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css" />
-</head>
-
-<body style="height: auto">
-    <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar" style="background: var(--bs-blue); height: 60px; padding: 0px">
-        <div class="container">
-            <a class="navbar-brand logo" href="#">Brand</a
+    <link
+      rel="stylesheet"
+      href="<%=request.getContextPath()%>/css/home_assets/bootstrap/css/bootstrap.min.css?h=a4a4b4ec2caaeea34fdeabb9e8eaf2dd"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Cabin:700"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="<%=request.getContextPath()%>/css/home_assets/css/styles.min.css?h=6677ea1bbff535befea0f9bbf0c6088a"
+    />
+    
+    
+    <style>
+    .button{
+    color:white;
+    background-color:rgba(255,255,255,.3);
+    border-radius:0px;
+    margin-right:50px;
+    margin-left:50px;
+    font-family: "Cabin","Helvetica Neue",Helvetica,Arial,sans-serif;
+    padding:10px;
+    }
+    </style>
+  </head>
+  <body
+    id="page-top"
+    data-bs-spy="scroll"
+    data-bs-target="#mainNav"
+    data-bs-offset="77"
+  >
+    <nav class="navbar navbar-light navbar-expand-md fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand" href="#">Brand</a
         ><button
           data-bs-toggle="collapse"
-          class="navbar-toggler"
-          data-bs-target="#navcol-1"
+          class="navbar-toggler navbar-toggler-right"
+          data-bs-target="#navbarResponsive"
+          type="button"
+          aria-controls="navbarResponsive"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+          value="Menu"
         >
-          <span class="visually-hidden">Toggle navigation</span
-          ><span class="navbar-toggler-icon"></span>
+          <i class="fa fa-bars"></i>
         </button>
-        <div class="collapse navbar-collapse" id="navcol-1">
+        <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ms-auto">
-            <li
-              class="nav-item"
-              style="padding-right: 0; height: 40px; width: 70px"
-            >
-              <!-- Start: Clean Button (Scale Hover Effect) --><button
-                class="btn btn-primary"
-                type="button"
-                style="
-                  border-radius: 48px;
-                  font-size: 16px;
-                  background: rgb(28, 119, 252);
-                  font-family: 'Noto Sans Inscriptional Pahlavi', sans-serif;
-                  font-weight: bold;
-                  width: 69px;
-                  border-width: 0px;
-                  height: 38px;
-                "
-              >
-              <a href="signin.jsp" style="text-decoration:none; color:white" >
-                Login
-                </a>
-              </button>
-              <!-- End: Clean Button (Scale Hover Effect) -->
+            <li class="nav-item nav-link">
+              <a class="nav-link active" href="#about">About</a>
+            </li>
+            <li class="nav-item nav-link">
+              <a class="nav-link" href="#download">Contact</a>
+            </li>
+            <li class="nav-item nav-link">
+              <a class="nav-link" href="#contact">Get in touch</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
-    <main class="page landing-page" style="height: 628px; padding-top: 0px">
-      <section
-        class="clean-block clean-hero"
-        style="
-          height: auto;
-          border-color: #464c50;
-          color: rgba(37, 88, 144, 0);
-          background: url('../css/home_assets/img/scenery/bg.jpg?h=8c817af2139b5302202332e27b755922')
-              center / cover no-repeat,
-            #b42b2b;
-        "
-      >
-        <div class="text">
-          <h2>JOIN THE BEST GROWING COMMUNITY</h2>
-          <p>
-            <br />Make each new day count by helping someone or just making
-            someone smile.<br /><br />
-          </p>
-          <button
-            class="btn btn-outline-light btn-lg"
-            type="button"
-            style="border-radius: 20px"
-          >
-          <a href="SignUp.jsp" style="text-decoration:none">
-            Join Us
-            </a>
-          </button>
+    <header
+      class="masthead"
+      style="
+        background-image: url('<%=request.getContextPath()%>/images/bg.jpeg');
+      "
+    >
+      <div class="intro-body">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 mx-auto">
+              <h1 class="brand-heading">grayscale</h1>
+              <p class="intro-text">
+                A free, responsive, one page Bootstrap theme.<br />Created with
+                love.
+              </p>
+              <button class="button navbar-toggler navbar-toggler-right"> <a href="<%=request.getContextPath()%>/Login" style="text-decoration:none;color:white">Login</a></button>
+              <button class="button navbar-toggler navbar-toggler-right"> <a href="<%=request.getContextPath()%>/SignUp" style="text-decoration:none;color:white">Register</a></button>
+            </div>
+          </div>
         </div>
-      </section>
-    </main>
-    <!-- Start: Footer Dark -->
-    <footer class="page-footer dark" style="padding-top: 0px; height: auto">
-      <div
-        class="footer-copyright"
-        style="
-          padding-top: 0px;
-          padding-bottom: 0px;
-          background: rgb(33, 37, 41);
-          border-color: rgba(33, 37, 41, 0);
-          color: rgb(33, 37, 41);
-          height: 63px;
-        "
-      >
-        <p style="color: rgb(255, 255, 255); height: 16px; margin: 18px">
-          © 2022 Copyright
-        </p>
+      </div>
+    </header>
+    <section class="text-center content-section" id="about" style="padding-bottom:250px">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <h2>About grayscale</h2>
+            <p>
+             Hi!! Achraf, m Fatima
+            </p>
+           
+          </div>
+        </div>
+      </div>
+    </section>
+    <section
+      class="text-center download-section content-section"
+      id="download"
+      style="
+        background-image: url('<%=request.getContextPath()%>/css/home_assets/img/downloads-bg.jpg?h=a1c980f5883ce005385e0ccdc3919d4c');
+        padding-top: 70px;
+        padding-bottom: 50px;
+      "
+    >
+      <div class="container">
+        <div class="col-lg-8 mx-auto">
+          <!-- Start: Contact Form Clean -->
+          <section class="contact-clean" style="padding: 0; text-align:-webkit-center;">
+            <form method="post" style="margin: 0;background-color: #ffffff26; color:white; box-shadow: 1px 1px 5px rgb(0 0 0 / 10%);">
+              <h2 class="text-center">Contact us</h2>
+              <!-- Start: Success Example -->
+              <div class="mb-3">
+                <input
+                  class="form-control"
+                  type="text"
+                  name="name"
+                  placeholder="Name"
+                />
+              </div>
+              <!-- End: Success Example --><!-- Start: Success Example -->
+              <div class="mb-3">
+                <input
+                  class="form-control"
+                  type="text"
+                  name="name"
+                  placeholder="Email"
+                />
+              </div>
+              <!-- End: Success Example -->
+              <div class="mb-3">
+                <textarea
+                  class="form-control"
+                  name="message"
+                  placeholder="Message"
+                  rows="14"
+                ></textarea>
+              </div>
+              <div class="mb-3" >
+                <button class="btn" type="submit" style="background-color:gray; color:white" >send</button>
+              </div>
+            </form>
+          </section>
+          <!-- End: Contact Form Clean -->
+        </div>
+      </div>
+    </section>
+    <section class="text-center content-section" id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <h2>get in touch</h2>
+            <p>
+              Feel free to leave us a comment on the<a href="#"
+                >&nbsp;Grayscale template overview page</a
+              >&nbsp;to give some feedback about this theme!
+            </p>
+            <ul class="list-inline banner-social-buttons">
+              <li class="list-inline-item">
+                &nbsp;<button
+                  class="btn btn-primary btn-lg btn-default"
+                  type="button"
+                >
+                  <i class="fa fa-google-plus fa-fw"></i
+                  ><span class="network-name">&nbsp; Google+</span>
+                </button>
+              </li>
+              <li class="list-inline-item">
+                &nbsp;<button
+                  class="btn btn-primary btn-lg btn-default"
+                  type="button"
+                >
+                  <i class="fa fa-twitter fa-fw"></i
+                  ><span class="network-name">&nbsp;Twitter</span>
+                </button>
+              </li>
+              <li class="list-inline-item">
+                &nbsp;<button
+                  class="btn btn-primary btn-lg btn-default"
+                  type="button"
+                >
+                  <i class="fa fa-github fa-fw"></i
+                  ><span class="network-name">&nbsp;github</span>
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="container text-center">
+        <p>Copyright ©&nbsp;Brand 2022</p>
       </div>
     </footer>
-    <!-- End: Footer Dark -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
-    <script src="../css/home_assets/js/script.min.js?h=1665ca77920bb6c16d0d2edee4a77966"></script>
+    <script src="<%=request.getContextPath()%>/css/home_assets/js/script.min.js?h=abade7a6b58120c54533d461e48e360b"></script>
   </body>
 </html>
+    
